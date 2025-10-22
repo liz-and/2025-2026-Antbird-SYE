@@ -1,0 +1,11 @@
+---
+title: "Working with Rates"
+format: html
+date: October 21, 2025
+editor: visual
+---
+
+
+
+
+

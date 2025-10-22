@@ -1,0 +1,59 @@
+---
+title: "Clean up the data"
+format: html
+date: October 21, 2025
+editor: visual
+---
+
+## Set up
+```{r}
+rm(list=ls())
+library(here)
+library(tidyverse)
+```
+
+```{r}
+bird <- read.csv(here("Data/ForgBout_00_01_07_08.csv")) 
+```
+
+## Clean up the data
+Change the 06 year to 07 - we think it's a typo
+Add the true/false columns 
+Save as a new datafile for general use
+
+
+```{r}
+# add the true/false columns
+
+bird <- bird |>
+  mutate(
+    Ind_Rinter = (Rinter > 0),
+    Ind_Rintra = (Rintra > 0),
+    Ind_Iinter = (Iinter > 0),
+    Ind_Iintra = (Iintra > 0),
+    Ind_Successes = (Successes > 0),
+  )
+```
+
+```{r}
+# change the 06 row to 07
+
+fix <- which(bird$obsid == "060606ChrisAM")
+bird$obsid[fix] <- "070606ChrisAM"
+
+```
+
+```{r}
+# check that the row was changed - it was
+which(bird$obsid == "060606ChrisAM")
+```
+
+## Save this file as a csv to use
+
+```{r}
+write.csv(bird, here("data", "ForgBout_Updated.csv"))
+```
+
+
+
+

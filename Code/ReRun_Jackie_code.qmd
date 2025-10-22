@@ -1,0 +1,389 @@
+---
+title: "re-run of Jackie's code"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(pscl)
+library(multcomp)
+library(emmeans)
+library(broom)
+library(here)
+```
+
+```{r}
+data_birds <- read.csv(here("Data/ForgBout_00_01_07_08.csv"))
+```
+
+
+# Cleaning and adding variables
+```{r}
+## edited by me to fix errors with inter vs intra
+
+new_bird_ind <- data_birds |>
+  mutate(
+    Ind_Rinter = (Rinter > 0),
+    Ind_Rintra = (Rintra > 0),
+    Ind_Iinter = (Iinter > 0),
+    Ind_Iintra = (Iintra > 0),
+    Ind_Successes = (Successes > 0),
+  )
+
+# Could write this to a csv if plan to use it:
+# write.csv(new_bird_ind, "new_bird_ind_data.csv")
+```
+She had it like this:
+mutate(
+ rsa = (Rinter > 0),
+ roa = (Rintra > 0),
+ isa = (Iinter > 0),
+ ioa = (Iintra > 0),
+)
+
+```{r}
+# Apply factor... (not sure exactly what this does)
+
+hierarchy_fct <- c("Phleg", "M. fort", "Rheg", "D. mer", "G. sal") # most dominant to least dominant - this hierarchy leveling is correct
+```
+
+```{r}
+# use the factor created above
+
+new_bird_ind <- new_bird_ind |> mutate(species = factor(species, hierarchy_fct))
+head(new_bird_ind)
+
+levels(new_bird_ind$species) #returns the species arranged in order from most to least dominant
+```
+
+
+# Model Selection
+
+## Poisson model
+```{r}
+pois_full <- glm(Successes ~ species + Ind_Rinter + Ind_Rintra + Ind_Iinter + Ind_Iintra + species:Ind_Rinter + species:Ind_Rintra + species:Iinter + species:Iintra, family = "poisson", data = new_bird_ind)
+summary(pois_full)
+```
+
+## Quasi Poisson
+```{r}
+
+quasi_full <- glm(Successes ~ species + Ind_Rinter + Ind_Rintra + Ind_Iinter + Ind_Iintra + species*Ind_Rinter + species*Ind_Rintra + species*Iinter + species*Iintra, family = "quasipoisson", data = new_bird_ind)
+
+summary(quasi_full)
+```
+
+## Negative Binomial Model
+```{r}
+nbinom_full <- glm.nb(Successes ~ species + Ind_Rinter + Ind_Rintra + Ind_Iinter + Ind_Iintra + species:Ind_Rinter + species:Ind_Rintra + species:Iinter + species:Iintra, data = new_bird_ind)
+
+summary(nbinom_full)
+```
+According to her file - rule out negative binomial and poisson because of the NA results in the summary for G. Sal and M. Fort for species:Iinter and species:Iintra
+
+
+## Neg Binomial or Poisson
+copied from Jackie's file
+
+```{r}
+new_bird_ind %>%
+  group_by(species) %>%
+  summarize(
+    meanRinter = mean(Rinter),
+    meanRintra = mean(Rintra),
+    meanIinter = mean(Iinter),
+    meanIntra = mean(Iintra),
+    sdRinter = sd(Rinter),
+    sdRintra = sd(Rintra),
+    sdIinter = sd(Iinter),
+    sdIintra = sd(Iintra),
+    n = n()
+  )
+# gives the means and standard devs for each species and each type of interaction
+```
+
+
+"Upon looking at the shape of data, it is revealed that most standard deviation counts are higher than the predictor means suggesting our mean and variances are not equal. Therefore, Poisson is not appropriate for our data. However, negative binomial is able to account for overdispersion in cases where the variance is greater than the mean."
+
+## Fitting the best model - testing predictor significance
+```{r}
+# use the neg binomial full model fit above
+plot(nbinom_full)
+
+```
+
+```{r}
+#stepwise function to determine model with lowest AIC
+step.model <- step(nbinom_full, direction="both")
+```
+
+```{r}
+# best model candidates w/ lowest AICs:
+bestmod1 <- glm.nb(Successes ~ species + Ind_Rinter + Ind_Iintra + species*Ind_Rinter, data = new_bird_ind)
+
+bestmod2 <- glm.nb(Successes ~ species + Ind_Rinter + species*Ind_Rinter, data = new_bird_ind)
+
+summary(bestmod1)
+summary(bestmod2)
+```
+
+"Since there is not a large difference in AIC between the two candidates, we choose the simpler option: bestmod2." --- for me at least that was the one with the smallest AIC too
+
+```{r}
+# assess goodness of fit for model
+gof.pvalue = 1 - pchisq(bestmod2$deviance, bestmod2$df.residual)
+gof.pvalue
+```
+
+"We have a very low p-value meaning our model doesn't fit the data very well. This means we have a 2% chance of observing a test statistic as, or more extreme than, the one calculated from the data under the null hypothesis."
+
+## Best Model Selection for Attempts as Response
+
+```{r}
+nbinom_full_attempts <- glm.nb(attempts ~ species + Ind_Rinter + Ind_Rintra + Ind_Iinter + Ind_Iintra + species*Ind_Rinter + species*Ind_Rintra + species*Ind_Iinter + species*Ind_Iintra, data = new_bird_ind)
+summary(nbinom_full_attempts)
+
+# use stepwise function to determine model with lowest AIC
+step.model <- step(nbinom_full_attempts, direction="both")
+```
+
+```{r}
+# best model candidates w/ lowest AICs:
+bestmod1_attempts <- glm.nb(attempts ~ species + Ind_Rintra + Ind_Iintra + species*Ind_Rintra, data = new_bird_ind)
+
+bestmod2_attempts <- glm.nb(attempts ~ species + Ind_Rinter + Ind_Rintra + Ind_Iintra + species:Ind_Rintra, data = new_bird_ind) #took out Iinter from her bestmod2 because it wasn't in my best mod
+
+summary(bestmod1_attempts)
+summary(bestmod2_attempts)
+```
+
+```{r}
+anova(bestmod1_attempts, bestmod2_attempts, test = "Chisq")
+
+# Since there's no siginificant difference between the two models' AIcs, and 
+# there is no evidence to reject that the models are any different, we're going to chose the first model.
+
+bestmod_attempts <- bestmod1_attempts
+```
+
+```{r}
+# assess goodness of fit for model
+gof.pvalue = 1 - pchisq(bestmod_attempts$deviance, bestmod_attempts$df.residual)
+gof.pvalue
+# low p-value; model does not fit the data very well...
+```
+
+# Best Model Interpretations
+
+## Pairwise Comparisons for Success
+
+"Performed pairwise comparisons across the significant interaction term of rsa (-edit- `Rinter`) found in the best model."
+
+```{r}
+# visualize the log mean number of successes (linear prediction) for species receiving same species aggression (rsa - `edit Rinter`):
+emmip_successes <- emmip(bestmod2, species ~ Ind_Rinter | Ind_Rinter) + labs(y = "Log Mean Number of Successes", x = "Levels of Rinter")
+
+# not working, not sure why
+
+# ggsave("data/log_mean_Rinter.jpg", emmip_successes, width = 8, height = 6, units = "in")
+```
+
+```{r}
+# calculate estimated marginal means (EMMs) for pairwise comparisons between species w respect to rsa (grouping var)
+
+# Liz - edited to Ind_Rinter
+
+emmeans(bestmod2, pairwise ~ species | Ind_Rinter)
+```
+
+```{r}
+# calculate marginal means for the interaction between species and rsa (`Rinter`)
+bird.emm <- emmeans(bestmod2, ~ species * Ind_Rinter)
+
+# create pairwise contrasts between `Rinter` levels, adjust for multiple testing using the multivariate t method
+bird.cont <- contrast(bird.emm, "consec", simple = "each", combine = TRUE, adjust = "mvt")
+
+# Estimate marginal means for the interaction
+emm_int <- emmeans(bestmod2, specs = ~ species * Ind_Rinter)
+
+# Pairwise comparisons with adjustment for multiple testing
+comp <- contrast(emm_int, method = "pairwise", adjust = "bonferroni")
+summary(comp)
+```
+
+```{r}
+confint_successes <- 
+  plot(comp) + theme_bw() + geom_vline(xintercept = 0, color = "red") + 
+  labs(y = "Estimated Log-Count Difference", x = "95% Confint Estimate")
+confint_successes
+
+# ggsave("data/confint_successes.jpg", plot = confint_successes, width = 7, height = 10, dpi = 300)
+
+# visualization of confidence intervals; any interval that contains 0 is not significant 
+plot(comp)
+```
+
+## Pairwise Comparisons for Attempts
+
+Performed pairwise comparisons across the significant interaction term of roa (edit - Rintra) found in the best model.
+
+```{r}
+# visualize the log mean number of successes (linear prediction) for -edit- species receieving Intraspecific aggression (Rintra)
+emmip_attempts <- emmip(bestmod_attempts, species ~ Ind_Rintra | Ind_Rintra) + labs(y = "Log Mean Number of Attempts", x = "Levels of Roa" )
+
+# ggsave("data/log_mean_Rintra.jpg", emmip_attempts, width = 8, height = 6, units = "in")
+```
+
+```{r}
+# calculate estimated marginal means (EMMs) for pairwise comparisons between species w respect to Rintra (grouping var)
+emmeans(bestmod_attempts, pairwise ~ species | Ind_Rintra)
+```
+
+```{r}
+# calculate marginal means for the interaction between species and roa
+bird.emm <- emmeans(bestmod_attempts, ~ species * Ind_Rintra)
+# create pairwise contrasts between roa levels, adjust for multiple testing using the multivariate t method
+bird.cont <- contrast(bird.emm, "consec", simple = "each", combine = TRUE, adjust = "mvt")
+
+# Estimate marginal means for the interaction
+emm_int <- emmeans(bestmod_attempts, specs = ~ species * Ind_Rintra)
+
+# Pairwise comparisons with adjustment for multiple testing
+comp <- contrast(emm_int, method = "pairwise", adjust = "bonferroni")
+summary(comp)
+```
+
+```{r}
+# visualization of confidence intervals; any interval that contains 0 is not significant 
+confint_attempts <- 
+  plot(comp) + theme_bw() + geom_vline(xintercept = 0, color = "red") + 
+  labs(y = "Estimated Log-Count Difference", x = "95% Confint Estimate")
+confint_attempts
+# ggsave("data/confint_attempts.jpg", plot = confint_attempts, width = 7, height = 10, dpi = 300)
+
+# calculate estimated marginal means (EMMs) for pairwise comparisons between species w respect to Rintra (grouping var)
+emmeans(bestmod_attempts, pairwise ~ species | Ind_Rintra)
+```
+
+## Those line plots
+### Successes as response
+#### Rinter
+```{r}
+best.pw_Rinter <- pairs(emmeans(bestmod2, ~ Ind_Rinter | species))
+best.pw_Rinter
+```
+```{r}
+test(best.pw_Rinter, by = NULL, adjust = "tukey", cross.adjust = "bonferroni")
+```
+
+```{r}
+# emmip(bestmod, rsa ~ species | species)
+emmip(bestmod2, species ~ Ind_Rinter | Ind_Rinter)
+```
+This plot shows the success comparison for each species when they did or did not recieve Interspecific aggression. 
+Notable:
+- Pleg much less successful when received interspec aggression
+- M. fort more successful when received interspec
+- all others also less successful when received interspec
+
+#### Rintra
+```{r}
+testmod_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra, data = new_bird_ind)
+
+emmip(testmod_Rintra, species ~ Ind_Rintra | Ind_Rintra)
+```
+This was a test model, not the "best model" for the data. Need to ask about whether using the best model is needed when we're trying to look at a specific question. 
+This plot shows the success when Received Intraspecific aggression is either true or false for each species. 
+Notable:
+- M. fort and G. sal much more successful when they are receiving aggression
+- Pleg is about the same, slight increase
+- rheg and D. mer both decreased slightly
+
+#### Iintra
+```{r}
+testmod_Iintra <- glm.nb(Successes ~ species + Ind_Iintra + species*Ind_Iintra, data=new_bird_ind)
+
+emmip(testmod_Iintra, species ~ Ind_Iintra | Ind_Iintra)
+```
+This plot also doesn't fit with a "best model for the data" but seems to have meaning
+
+Plot shows the success when Intraspecific Aggression is initiated for each species
+Notable:
+- Rheg and Phleg had increase in success
+- G. sal had high decrease in success
+- D. mer rematined about the same
+No M. fort for true because no instances in data
+
+#### Iinter
+```{r}
+testmod_Iinter <- glm.nb(Successes ~ species + Ind_Iinter + species*Ind_Iinter, data = new_bird_ind)
+
+emmip(testmod_Iinter, species ~ Ind_Iinter | Ind_Iinter)
+```
+Plot shows the success when initiating interspecific aggression for each species.
+Notable
+- Rheg increases success
+- Phleg decreases success
+- D mer increases success
+No G. sal for true because no instances of Iinter
+
+### Attempts as response
+#### Rinter
+```{r}
+testmod_AttRinter <- glm.nb(attempts ~ species + Ind_Rinter + species*Ind_Rinter, data = new_bird_ind)
+
+emmip(testmod_AttRinter, species ~ Ind_Rinter | Ind_Rinter)
+```
+This plot shows the attempts (in log scale?) for each species when they either did or did not recieve interspecific aggression.
+Notable:
+- M. fort had big increase
+- Rheg, Phleg, G. sal had decreases
+
+#### Rintra
+```{r}
+testmod_AttRintra <- glm.nb(attempts ~ species + Ind_Rintra + species*Ind_Rintra, data = new_bird_ind)
+
+emmip(testmod_AttRintra, species ~ Ind_Rintra | Ind_Rintra)
+```
+This plot shows the attempts made when receiving intraspecific aggression or not by species. 
+Notable:
+- G. sal huge increase
+- Phleg small increase
+- M. fort increase
+- Rheg decrease
+
+#### Iintra
+
+```{r}
+testmod_AttIintra <- glm.nb(attempts ~ species + Ind_Iintra + species*Ind_Iintra, data = new_bird_ind)
+
+emmip(testmod_AttIintra, species ~ Ind_Iintra | Ind_Iintra)
+```
+This plot shows the attempts made (log scale?) when intraspecific aggression was initiated by species
+Notable:
+- Rheg and Phleg increased attempts
+- G. sal decreased 
+- D. mer remained about the same
+No data for M. fort
+
+
+#### Iinter
+```{r}
+testmod_AttIinter <- glm.nb(attempts ~ species + Ind_Iinter + species*Ind_Iinter, data = new_bird_ind)
+
+emmip(testmod_AttIinter, species ~ Ind_Iinter | Ind_Iinter)
+```
+This plot shows the attempts made when interspecific aggression was initiated by species. 
+Notable:
+- Phleg decreased attempts
+- M. fort and D. mer increased attempts
+- Rheg increased attempts slightly
+No data for G. sal when Iinter is true
+
+
+_to do:_
+1) go back to the successes emmeans stuff and figure out why it won't run - something to do with model name I think -- fixed, didn't have Ind_xxx
+2) figure out interpretations for this stuff, esp the graphs
+3) can i make edits to fit the question better?
+4) how do i read the CI graph on her poster

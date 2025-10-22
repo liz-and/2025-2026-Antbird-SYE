@@ -1,0 +1,182 @@
+---
+title: "Exploratory Code"
+author: Liz Anderson
+format: html
+editor: visual
+---
+
+September 15, 2025
+
+# Set up
+
+```{r}
+rm(list=ls())
+library(here)
+library(tidyverse)
+```
+## Read in data
+```{r}
+data_birds <- read.csv(here("Data", "ForgBout_00_01_07_08.csv"))
+```
+
+Notes on the variables
+* obsid
+* species - the species of antbird observed
+* duration - observation time
+* attempts
+* Rinter - recieved other species aggression
+* Rintra - recieved same species aggression
+* Iinter - initiated other species aggression
+* Iintra - initiated same species aggression
+* Successes
+
+```{r}
+# make binary variables - true or false the interaction occurred
+
+new_bird_ind <- data_birds |>
+  mutate(
+    Ind_Rinter = (Rinter > 0),
+    Ind_Rintra = (Rintra > 0),
+    Ind_Iinter = (Iinter > 0),
+    Ind_Iintra = (Iintra > 0),
+    Ind_Successes = (Successes > 0),
+  )
+
+```
+
+```{r}
+hierarchy_fct <- c("Phleg", "M. fort", "Rheg", "D. mer", "G. sal") # most dominant to least dominant - this hierarchy leveling is correct
+```
+```{r}
+# use the factor created above to make dataset with that applied
+new_bird_ind <- new_bird_ind |> mutate(species = factor(species, hierarchy_fct))
+```
+
+
+# Explore the data
+```{r}
+dim(data_birds) # 1497 rows and 9 variables
+glimpse(data_birds)
+colSums(is.na(data_birds)) #No NA values in the dataset
+```
+
+```{r}
+table(data_birds$species) #print how many values for each level of the species variable
+
+summary(new_bird_ind) #get summary tables for each variable
+
+```
+
+## Look closer at each species
+
+```{r}
+# code to get rows of one species where one interaction is occurring(Y/N, not counts)
+# in order of hierarchy
+
+# Received Intraspecific aggression (same spp to same spp)
+
+new_bird_ind |>
+  filter(species == "Phleg") |>
+  filter(Ind_Rintra == TRUE)
+
+new_bird_ind |>
+  filter(species == "M. fort") |>
+  filter(Ind_Rintra == TRUE)
+
+new_bird_ind |>
+  filter(species == "Rheg") |>
+  filter(Ind_Rintra == TRUE)
+
+new_bird_ind |>
+  filter(species == "D. mer") |>
+  filter(Ind_Rintra == TRUE)
+
+new_bird_ind |>
+  filter(species == "G. sal") |>
+  filter(Ind_Rintra == TRUE)
+```
+### Recieved Intraspecific aggression by species
+above code
+
+`Phleg` has 36 cases of `Rintra`
+`M. fort` has 2 cases of `Rintra`
+`Rheg` has 27 cases of `Rintra`
+`D. mer` has 48 cases of `Rintra` 
+`G. sal` has 4 cases of `Rintra`
+
+```{r}
+# Initiated Intraspecific Aggression (same spp to same spp)
+
+new_bird_ind |>
+  filter(species == "Phleg") |>
+  filter(Ind_Iintra == TRUE)
+
+new_bird_ind |>
+  filter(species == "M. fort") |>
+  filter(Ind_Iintra == TRUE)
+
+new_bird_ind |>
+  filter(species == "Rheg") |>
+  filter(Ind_Iintra == TRUE)
+
+new_bird_ind |>
+  filter(species == "D. mer") |>
+  filter(Ind_Iintra == TRUE)
+
+new_bird_ind |>
+  filter(species == "G. sal") |>
+  filter(Ind_Iintra == TRUE)
+```
+### Initiated Intraspecific Aggression by species
+above code 
+
+`Phleg` has 37 cases of `Iintra`
+`M. fort` has 0 cases of `Iintra`
+`Rheg` has 19 cases of `Iintra`
+`D. mer` has 41 cases of `Iintra` 
+`G. sal` has 3 cases of `Iintra`
+
+
+### Plots for the above counts
+```{r}
+# Copied over from Jackie's code, modified with my variables
+
+# graphs show the counts by species for each variable recieved or initiated inter and intra specific aggression
+
+ggplot(new_bird_ind, aes(x = species, y = Rinter, fill = species)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Species", y = "Rinter Count") +
+  theme_minimal()
+
+ggplot(new_bird_ind, aes(x = species, y = Rintra, fill = species)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Species", y = "Rintra Count") +
+  theme_minimal()
+
+ggplot(new_bird_ind, aes(x = species, y = Iinter, fill = species)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Species", y = "Iinter Count") +
+  theme_minimal()
+
+ggplot(new_bird_ind, aes(x = species, y = Iintra, fill = species)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Species", y = "Iintra Count") +
+  theme_minimal()
+```
+_Notes and to-do Oct 10_
+1) Try to separate out the obsid column
+- first 2 digits are the year, second 2 digits the month, then last 2 are the day, the text is the antswarm (or the observer?)
+
+- the 06 row is probably a typo
+
+Notes on the birds behaviors
+* D. mer is fully solitary
+* Others are in family groups
+* M. fort has smaller territory size and utilizes praedator swarms more - so less interactions with others intraspecifically unless their territory has swarm right at the edge with another
+
+Explore by unit time and make figures by species - what do they do during each time group - do they interact?
+
+
+
+
+
