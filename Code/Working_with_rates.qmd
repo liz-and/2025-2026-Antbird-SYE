@@ -39,8 +39,7 @@ levels(bird$species)
 - I made a new column from the duration column with just seconds so it's in integer form
 - Including density - would need to do a bunch of filtering I think? Best way to do this? considering that the obsid column has date (year, month, day) and person
 
-
-## Intraspecific
+## Offset
 ### Rintra
 ```{r}
 offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra, data = bird, offset = log(bird$duration_seconds))
@@ -53,16 +52,74 @@ offset2_Rintra <- glm.nb(Successes ~ species + Rintra + species*Rintra, data = b
 #emmip(testmod_Rintra, species ~ Ind_Rintra | Ind_Rintra)
 ```
 
-
-### Iintra
-
+## Filter one species
 ```{r}
-# model from ReRun qmd 
-# add in offset
+# filter to just one species - start with D.mer
 
-testmod_Iintra <- glm.nb(Successes ~ species + Ind_Iintra + species*Ind_Iintra, data=new_bird_ind)
+Dmer_bird <- bird |>
+  filter(species == "D. mer")
+
+Phleg_bird <- bird |>
+  filter(species == "Phleg")
+
+#change duration_seconds to numeric in case that was why couldn't find it for an offset... didn't work
+Dmer_bird$duration_seconds <- as.numeric(Dmer_bird$duration_seconds)
+
 ```
 
+```{r}
+offset_Dmer_Rintra <- glm.nb(Successes ~ Ind_Rintra + attempts + Ind_Rintra:attempts, data = Dmer_bird, offset = log(Dmer_bird$duration_seconds)) # can't find the duration_seconds...
+```
+
+
+
+## Zero Inflated Poisson
+
+```{r}
+ggplot(aes(x = Successes), data = Dmer_bird)+
+  geom_bar()
+
+ggplot(aes(x = Successes), data = bird)+
+  geom_bar()
+
+ggplot(aes(x = Successes), data = Phleg_bird)+
+  geom_bar()
+
+# these do seem like candidates for zero-inflated poisson models
+```
+Thoughts
+- is there 2 clear groups? each bird has equal chance of success, but might be stopped by bullying - which is what we're trying to figure out. but they could also not have any bullying and be unsuccessful
+
+
+### Part 1 - the poisson regression part
+model the number of successes amongst birds who are successful
+
+include duration_seconds here
+attempts
+Rintra - value or yes/no? - maybe include, maybe not
+
+
+
+### Part 2 - the logistic regression part/zero inflation part
+model the probability that a bird is not successful
+
+include duration_seconds here
+include Rintra or Ind_Rintra here
+
+### code
+```{r}
+ZIPmod_Dmer <- zeroinfl(Successes ~ attempts + duration_seconds|Ind_Rintra + duration_seconds, data = Dmer_bird, dist = "poisson")
+
+# got error message - system is computationally singular.... 
+# googled and says could be issues with multicolinearity, overfitting, zero variance 
+```
+
+
+```{r}
+#correlation matrix
+cor(Dmer_bird)
+# saying x must be numeric - why?
+```
 
 
 

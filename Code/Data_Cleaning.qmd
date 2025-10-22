@@ -85,7 +85,7 @@ bird |>
 # considering there are multiple entries for these values I am unsure whether or not this is a typo
 # but it also seems unlikely that a bird could make 10 attempts in 0.4 seconds?
 
-### AH HA is this in hours:minutes:seconds??
+### is this in hours:minutes:seconds??
 # in which case these would be seconds, which still is quick but maybe could be reasonable
 
 # should I still transform these to be seconds? will be big number but considering we have some entries in just seconds, might be needed? unless can get the seconds as a decimal value of the minutes
@@ -95,7 +95,7 @@ bird |>
 # note - there's also some values that are 0:00:00
 ```
 
-
+UPDATE: It should be minutes:seconds -- cross reference with original data from Sue
 
 ```{r}
 # googled how to do this
