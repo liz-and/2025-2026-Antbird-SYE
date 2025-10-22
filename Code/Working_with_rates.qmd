@@ -42,7 +42,17 @@ levels(bird$species)
 ## Offset
 ### Rintra
 ```{r}
-offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra, data = bird, offset = log(bird$duration_seconds))
+
+bird_no_na <- bird |> drop_na(duration_seconds) |>
+  filter(duration_seconds > 0)
+
+
+offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra 
+                         + offset(log(duration_seconds))
+                         , data = bird_no_na)
+
+summary(offset1_Rintra)
+
 
 offset2_Rintra <- glm.nb(Successes ~ species + Rintra + species*Rintra, data = bird, offset = log(bird$duration_seconds))
 
@@ -51,6 +61,12 @@ offset2_Rintra <- glm.nb(Successes ~ species + Rintra + species*Rintra, data = b
 # next part from ReRun qmd - look at this plot - might not work here
 #emmip(testmod_Rintra, species ~ Ind_Rintra | Ind_Rintra)
 ```
+```{r}
+sort(log(bird_no_na$duration_seconds +1)) |> head() 
+sum(is.na(bird$duration_seconds))
+```
+
+
 
 ## Filter one species
 ```{r}
