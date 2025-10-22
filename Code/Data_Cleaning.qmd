@@ -47,9 +47,79 @@ bird$obsid[fix] <- "070606ChrisAM"
 # check that the row was changed - it was
 which(bird$obsid == "060606ChrisAM")
 ```
+```{r}
+hierarchy_fct <- c("Phleg", "M. fort", "Rheg", "D. mer", "G. sal") # most dominant to least dominant - this hierarchy leveling is correct
+```
+```{r}
+# use the factor created above to make dataset with that applied
+bird <- bird |> mutate(species = factor(species, hierarchy_fct))
+```
+```{r}
+levels(bird$species)
+```
+
+### adding column duration to seconds
+```{r}
+# (unedited thought process)
+
+# First looking at if there's any that have milliseconds.
+unique(bird$duration)
+
+# there is... but only for these values:
+
+bird |>
+  filter(duration == "0:00:01")
+
+bird |>
+  filter(duration == "0:00:02")
+  
+bird |>
+  filter(duration == "0:00:04")
+  
+bird |>
+  filter(duration == "0:00:03")
+  
+bird |>
+  filter(duration == "0:00:05")
+
+# considering there are multiple entries for these values I am unsure whether or not this is a typo
+# but it also seems unlikely that a bird could make 10 attempts in 0.4 seconds?
+
+### AH HA is this in hours:minutes:seconds??
+# in which case these would be seconds, which still is quick but maybe could be reasonable
+
+# should I still transform these to be seconds? will be big number but considering we have some entries in just seconds, might be needed? unless can get the seconds as a decimal value of the minutes
+
+# should double check with Sue that it is hours:minutes:seconds
+
+# note - there's also some values that are 0:00:00
+```
+
+
+
+```{r}
+# googled how to do this
+
+library(lubridate)
+
+duration_period <- hms(bird$duration)
+
+bird$duration_seconds <- period_to_seconds(duration_period)
+# this worked!
+
+```
+
+```{r}
+# move new column duration_seconds after duration for easier reference
+
+bird <- bird |>
+  relocate(duration_seconds, .after = duration)
+```
+
+
 
 ## Save this file as a csv to use
-
+Note that it doesn't save the hierarchy factor stuff
 ```{r}
 write.csv(bird, here("data", "ForgBout_Updated.csv"))
 ```

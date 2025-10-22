@@ -5,6 +5,63 @@ date: October 21, 2025
 editor: visual
 ---
 
+## Set up
+```{r}
+rm(list=ls())
+library(here)
+library(tidyverse)
+# libraries that Jackie had loaded
+library(pscl)
+library(multcomp)
+library(emmeans)
+library(broom)
+```
+
+### Load data
+```{r}
+# the updated dataset from `Data_Cleaning.qmd`
+bird <- read.csv(here("Data/ForgBout_Updated.csv"))
+```
+
+```{r}
+hierarchy_fct <- c("Phleg", "M. fort", "Rheg", "D. mer", "G. sal") # most dominant to least dominant - this hierarchy leveling is correct
+```
+```{r}
+# use the factor created above to make dataset with that applied
+bird <- bird |> mutate(species = factor(species, hierarchy_fct))
+```
+```{r}
+levels(bird$species)
+```
+
+## My thoughts and questions
+- Can I still use the true/false and make the line plots with an offset?
+- I made a new column from the duration column with just seconds so it's in integer form
+- Including density - would need to do a bunch of filtering I think? Best way to do this? considering that the obsid column has date (year, month, day) and person
+
+
+## Intraspecific
+### Rintra
+```{r}
+offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra, data = bird, offset = log(bird$duration_seconds))
+
+offset2_Rintra <- glm.nb(Successes ~ species + Rintra + species*Rintra, data = bird, offset = log(bird$duration_seconds))
+
+# having issues with the offset working...
+
+# next part from ReRun qmd - look at this plot - might not work here
+#emmip(testmod_Rintra, species ~ Ind_Rintra | Ind_Rintra)
+```
+
+
+### Iintra
+
+```{r}
+# model from ReRun qmd 
+# add in offset
+
+testmod_Iintra <- glm.nb(Successes ~ species + Ind_Iintra + species*Ind_Iintra, data=new_bird_ind)
+```
 
 
 
