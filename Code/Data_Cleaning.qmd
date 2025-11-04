@@ -58,7 +58,8 @@ bird <- bird |> mutate(species = factor(species, hierarchy_fct))
 levels(bird$species)
 ```
 
-### adding column duration to seconds
+
+### issue with duration rows
 ```{r}
 # (unedited thought process)
 
@@ -69,60 +70,208 @@ unique(bird$duration)
 
 bird |>
   filter(duration == "0:00:01")
+# this is all from 2007, 136 rows
 
 bird |>
   filter(duration == "0:00:02")
+# all from 2007, 51 rows
   
 bird |>
   filter(duration == "0:00:04")
+# all from 2007, 15 rows
   
 bird |>
   filter(duration == "0:00:03")
+# all from 2007, 17 rows
   
 bird |>
   filter(duration == "0:00:05")
+# all from 2007, only 2 rows
 
 # considering there are multiple entries for these values I am unsure whether or not this is a typo
 # but it also seems unlikely that a bird could make 10 attempts in 0.4 seconds?
 
-### is this in hours:minutes:seconds??
-# in which case these would be seconds, which still is quick but maybe could be reasonable
-
-# should I still transform these to be seconds? will be big number but considering we have some entries in just seconds, might be needed? unless can get the seconds as a decimal value of the minutes
-
-# should double check with Sue that it is hours:minutes:seconds
 
 # note - there's also some values that are 0:00:00
 ```
 
 UPDATE: It should be minutes:seconds -- cross reference with original data from Sue
 
+### pull in the raw data
+
+```{r}
+raw2007 <- read.csv(here("Data/raw/For.Bouts2007.csv"))
+```
+
+See if there's any durations that are in miliseconds
+```{r}
+raw2007 |>
+  filter(duration == "0:00:01")
+
+raw2007 |>
+  filter(duration == "0:00:02")
+
+raw2007 |>
+  filter(duration == "0:00:04")
+
+raw2007 |>
+  filter(duration == "0:00:03")
+  
+raw2007 |>
+  filter(duration == "0:00:05")
+
+## This is saying there's no rows, but when I looked at the dataset there is......
+
+## also noticing that the rows with 00:00:00 have attempts.... that's not possible
+```
+```{r}
+# brainstorm of process: filter for just the 2007 to see if they just did complete cases in bird
+
+birdfilter07 <- bird |>
+  filter(str_detect(obsid, "^07"))
+```
+
+```{r}
+# see what all the levels of Colony variable is
+table(raw2007$Colony) 
+
+# this is part of the obsid variable in bird
+# notice typo in Norma-Jean
+
+fixNJ <- which(raw2007$Colony == "Norma-Jeean")
+raw2007$Colony[fixNJ] <- "Norma-Jean"
+# worked
+
+# another typo in Eliana - i think a space after one?
+
+fixEliana <- which(raw2007$Colony == "Eliana ")
+raw2007$Colony[fixEliana] <- "Eliana"
+# worked
+
+table(raw2007$Colony) 
+
+# another note- there's 2 rows that don't have a Colony entry - I think it's 528 and 580 which have no complete data so should delete (and isn't part of the bird 2007 data)
+
+raw2007 <- raw2007[-c(528, 580), ]
+# worked to remove those rows
+  
+# now have correct number of rows and the Colony variable looks normal
+```
+
+Want to see if the rows line up at all
+```{r}
+birdfilter07[323, ]
+
+raw2007[323, ]
+# they do line up - but also they both have duration 0:00:01
+```
+
+### Remove the rows that are weird and see what we're left with
+
+```{r}
+# from the full bird dataset
+
+bird_normal_dur <- bird |>
+  filter(!duration %in% c("0:00:01", "0:00:02", "0:00:03", "0:00:04", "0:00:05", "0:00:00"))
+```
+
+Also remove row 307 because it doesn't have any duration
+```{r}
+bird_normal_dur <- bird_normal_dur[-c(307), ]
+```
+This left me with 1266 observations, as opposed to the 1497 we started with from bird - so had to remove 231 that were wonky
+
+
+Check how many of those are from 2007 and each year
+```{r}
+bird_normal_dur |>
+  filter(str_detect(obsid, "^07"))
+# 557 rows from 2007
+
+bird_normal_dur |>
+  filter(str_detect(obsid, "^00"))
+# 100 rows from 2000
+
+bird_normal_dur |>
+  filter(str_detect(obsid, "^01"))
+# 248 rows from 2001
+
+bird_normal_dur |>
+  filter(str_detect(obsid, "^08"))
+# 361 rows from 2008
+```
+
+
+
+## Transform to seconds
 ```{r}
 # googled how to do this
 
 library(lubridate)
 
-duration_period <- hms(bird$duration)
+duration_period <- ms(bird_normal_dur$duration)
 
-bird$duration_seconds <- period_to_seconds(duration_period)
-# this worked!
+bird_normal_dur$duration_seconds <- period_to_seconds(duration_period)
+# this didn't work, got NA values
+
+
+#testing with hours,minutes,seconds function
+hms_duration_period <- hms(bird_normal_dur$duration)
+
+bird_normal_dur$hms_duration_seconds <- period_to_seconds(hms_duration_period)
+# this worked - makes me think there might be some rows that do have milliseconds recorded??
+
 
 ```
 
 ```{r}
 # move new column duration_seconds after duration for easier reference
 
-bird <- bird |>
+bird_normal_dur <- bird_normal_dur |>
   relocate(duration_seconds, .after = duration)
+
+bird_normal_dur <- bird_normal_dur |>
+  relocate(hms_duration_seconds, .after = duration_seconds)
 ```
 
-
-
-## Save this file as a csv to use
-Note that it doesn't save the hierarchy factor stuff
+Check if any rows have milliseconds
 ```{r}
-write.csv(bird, here("data", "ForgBout_Updated.csv"))
+# got this code from google - filtering for any rows that don't end with 00
+
+bird_normal_dur |>
+    filter(!str_detect(duration, "00$"))
+
+bird_normal_dur |>
+    filter(!grepl("00$", duration))
+
+# it says there are no rows that end with something other than 00
 ```
+
+New plan - divide the hms to seconds column by 60 - this comes up with the correct seconds in ms time
+```{r}
+bird_normal_dur <- bird_normal_dur |>
+  mutate(duration_seconds = hms_duration_seconds / 60)
+
+# this was very roundabout but it worked!!
+```
+
+Remove the column with the hms format
+```{r}
+bird_normal_dur <- bird_normal_dur |>
+  select(-hms_duration_seconds)
+```
+
+
+
+### Save this file
+
+```{r}
+write.csv(bird_normal_dur, here("Data", "Bird_edited.csv"))
+```
+Note that it doesn't save the hierarchy factor stuff
+
+
+
 
 
 

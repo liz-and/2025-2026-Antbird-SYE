@@ -19,8 +19,8 @@ library(broom)
 
 ### Load data
 ```{r}
-# the updated dataset from `Data_Cleaning.qmd`
-bird <- read.csv(here("Data/ForgBout_Updated.csv"))
+# the updated dataset with only the rows that has seconds format possible
+bird <- read.csv(here("Data/Bird_edited.csv"))
 ```
 
 ```{r}
@@ -42,28 +42,25 @@ levels(bird$species)
 ## Offset
 ### Rintra
 ```{r}
-
-bird_no_na <- bird |> drop_na(duration_seconds) |>
-  filter(duration_seconds > 0)
-
-
-offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra 
-                         + offset(log(duration_seconds))
-                         , data = bird_no_na)
+offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra + offset(log(duration_seconds)), data = bird)
 
 summary(offset1_Rintra)
+# the offset worked!!
 
-
-offset2_Rintra <- glm.nb(Successes ~ species + Rintra + species*Rintra, data = bird, offset = log(bird$duration_seconds))
-
-# having issues with the offset working...
-
-# next part from ReRun qmd - look at this plot - might not work here
-#emmip(testmod_Rintra, species ~ Ind_Rintra | Ind_Rintra)
+# offset2_Rintra <- glm.nb(Successes ~ species + Rintra + species*Rintra, data = bird, offset = log(bird$duration_seconds))
 ```
+
+
 ```{r}
-sort(log(bird_no_na$duration_seconds +1)) |> head() 
-sum(is.na(bird$duration_seconds))
+# next part from ReRun qmd - look at this plot - might not work here
+emmip(offset1_Rintra, species ~ Ind_Rintra | Ind_Rintra)
+
+# This worked, but I'm not quite sure what it means
+```
+
+```{r}
+#sort(log(bird_no_na$duration_seconds +1)) |> head() 
+#sum(is.na(bird$duration_seconds))
 ```
 
 
@@ -79,12 +76,14 @@ Phleg_bird <- bird |>
   filter(species == "Phleg")
 
 #change duration_seconds to numeric in case that was why couldn't find it for an offset... didn't work
-Dmer_bird$duration_seconds <- as.numeric(Dmer_bird$duration_seconds)
+
 
 ```
 
 ```{r}
-offset_Dmer_Rintra <- glm.nb(Successes ~ Ind_Rintra + attempts + Ind_Rintra:attempts, data = Dmer_bird, offset = log(Dmer_bird$duration_seconds)) # can't find the duration_seconds...
+offset_Dmer_Rintra <- glm.nb(Successes ~ Ind_Rintra + attempts + Ind_Rintra:attempts + offset(log(duration_seconds)), data = Dmer_bird) 
+
+# offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra + offset(log(duration_seconds)), data = bird)
 ```
 
 
@@ -126,8 +125,16 @@ include Rintra or Ind_Rintra here
 ```{r}
 ZIPmod_Dmer <- zeroinfl(Successes ~ attempts + duration_seconds|Ind_Rintra + duration_seconds, data = Dmer_bird, dist = "poisson")
 
+# now thinking that attempts and successes is way too correlated to use that as a predictor - do something else *******************
+
+# worked
+summary(ZIPmod_Dmer)
+
+
+#### OLD #####
 # got error message - system is computationally singular.... 
 # googled and says could be issues with multicolinearity, overfitting, zero variance 
+###############
 ```
 
 
