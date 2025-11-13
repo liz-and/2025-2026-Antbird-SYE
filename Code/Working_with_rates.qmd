@@ -20,7 +20,7 @@ library(broom)
 ### Load data
 ```{r}
 # the updated dataset with only the rows that has seconds format possible
-bird <- read.csv(here("Data/Bird_edited.csv"))
+bird <- read.csv(here("Data/ForgBout_almost.csv"))
 ```
 
 ```{r}
@@ -39,60 +39,63 @@ levels(bird$species)
 - I made a new column from the duration column with just seconds so it's in integer form
 - Including density - would need to do a bunch of filtering I think? Best way to do this? considering that the obsid column has date (year, month, day) and person
 
+_New questions_
+- Should i use the count variables or the T/F variables for models?
+- 
+
+### Thinking through approach to models
+- Could do just one species at a time - might make the most sense because they're all different in dominance
+- put in both initiated aggression and received aggression?
+
+
+
 ## Offset
-### Rintra
+
+### Filter one species
 ```{r}
-offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra + offset(log(duration_seconds)), data = bird)
+# filter to just one species - starting with Phleg - most aggressive
 
-summary(offset1_Rintra)
-# the offset worked!!
+Phleg_bird <- bird |>
+  filter(species == "Phleg")
 
-# offset2_Rintra <- glm.nb(Successes ~ species + Rintra + species*Rintra, data = bird, offset = log(bird$duration_seconds))
+```
+
+```{r}
+Phleg_mod_offset <- glm.nb(Successes ~ Rintra + Rinter + Iintra + Iinter + offset(log(duration_seconds)), data = Phleg_bird) 
+
+summary(Phleg_mod_offset)
+```
+
+
+### Rintra from before
+```{r}
+### Saving this for later but going to focus on each species individually for now ###
+
+
+# offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra + offset(log(duration_seconds)), data = bird)
+
+# summary(offset1_Rintra)
+
 ```
 
 
 ```{r}
 # next part from ReRun qmd - look at this plot - might not work here
-emmip(offset1_Rintra, species ~ Ind_Rintra | Ind_Rintra)
+# emmip(offset1_Rintra, species ~ Ind_Rintra | Ind_Rintra)
 
 # This worked, but I'm not quite sure what it means
 ```
 
-```{r}
-#sort(log(bird_no_na$duration_seconds +1)) |> head() 
-#sum(is.na(bird$duration_seconds))
-```
 
 
-
-## Filter one species
-```{r}
-# filter to just one species - start with D.mer
-
-Dmer_bird <- bird |>
-  filter(species == "D. mer")
-
-Phleg_bird <- bird |>
-  filter(species == "Phleg")
-
-#change duration_seconds to numeric in case that was why couldn't find it for an offset... didn't work
-
-
-```
-
-```{r}
-offset_Dmer_Rintra <- glm.nb(Successes ~ Ind_Rintra + attempts + Ind_Rintra:attempts + offset(log(duration_seconds)), data = Dmer_bird) 
-
-# offset1_Rintra <- glm.nb(Successes ~ species + Ind_Rintra + species*Ind_Rintra + offset(log(duration_seconds)), data = bird)
-```
 
 
 
 ## Zero Inflated Poisson
 
 ```{r}
-ggplot(aes(x = Successes), data = Dmer_bird)+
-  geom_bar()
+# ggplot(aes(x = Successes), data = Dmer_bird)+
+#  geom_bar()
 
 ggplot(aes(x = Successes), data = bird)+
   geom_bar()
@@ -110,7 +113,7 @@ Thoughts
 model the number of successes amongst birds who are successful
 
 include duration_seconds here
-attempts
+attempts?
 Rintra - value or yes/no? - maybe include, maybe not
 
 
@@ -123,12 +126,12 @@ include Rintra or Ind_Rintra here
 
 ### code
 ```{r}
-ZIPmod_Dmer <- zeroinfl(Successes ~ attempts + duration_seconds|Ind_Rintra + duration_seconds, data = Dmer_bird, dist = "poisson")
+ZIPmod_Phleg <- zeroinfl(Successes ~ attempts + duration_seconds|Rintra + duration_seconds, data = Phleg_bird, dist = "poisson")
 
-# now thinking that attempts and successes is way too correlated to use that as a predictor - do something else *******************
+# now thinking that attempts and successes is way too correlated to use that as a predictor - do something else?
 
 # worked
-summary(ZIPmod_Dmer)
+summary(ZIPmod_Phleg)
 
 
 #### OLD #####
@@ -140,7 +143,7 @@ summary(ZIPmod_Dmer)
 
 ```{r}
 #correlation matrix
-cor(Dmer_bird)
+cor(Phleg_bird)
 # saying x must be numeric - why?
 ```
 

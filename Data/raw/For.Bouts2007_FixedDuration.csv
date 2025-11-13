@@ -243,123 +243,123 @@ obsid,species,colors,time,duration,attempts,Rinter,Rintra,Iinter,Iintra,Notes,Su
 ,G. sal,unb,,1:10:00,1,0,0,0,0,,1,,Male,Gunb,Labbie,5/24/07,,AM
 ,G. sal,unb,,1:59:00,2,0,0,0,0,,2,,Female,Gunb,Kathy,5/24/07,,AM
 ,M. fort,unb,,0:44:00,1,0,0,0,0,,1,,Male,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:01,1,0,0,0,0,,1,LS,Male,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:02,2,0,0,0,0,,2,LS,Male,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:02,0,0,0,0,0,,o,LS,Male,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:01,0,0,0,0,0,,0,LS,Male,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,0:53:00,1,0,0,0,0,,1,LS,Male,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,2:33:00,2,0,0,0,0,,2,LS,Male,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,1:52:00,0,0,0,0,0,,0,LS,Male,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,1:00:00,0,0,0,0,0,,0,LS,Male,Munb,Kathy,6/11/07,,AM
 ,M. fort,unb,,0:00:01,0,0,0,0,0,,0,LS,Male,Munb,Kathy,,,AM
-,M. fort,unb,,0:00:01,1,0,0,0,0,,1,LS,Male,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:01,2,0,0,0,0,,1,AS,Female,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:01,2,0,0,0,0,,1,AS,Male,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:01,0,1,0,0,0,Rheg s-gw,0,AS,Male,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:01,1,0,0,0,0,,1,AS,Female,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:01,1,0,0,0,,,1,AS,Female,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:02,0,0,0,0,0,,0,AS,Female,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:01,1,0,0,0,0,,1,AS,Female,Munb,Kathy,6/11/07,,AM
-,M. fort,unb,,0:00:01,1,0,0,0,0,,1,AS,Male,Munb,Kathy,6/11/07,,AM
-,D. mer,s-yw,,0:00:01,1,1,0,0,0,Phleg,o,SKW,Female,Ds-yw,Kathy,6/9/07,,AM
-,D. mer,s-pb,,0:00:02,1,0,0,1,0,D.ful,1,SKW,Unknown,Ds-pb,Kathy,6/9/07,,AM
-,D. mer,unb,,0:00:01,2,0,0,0,0,,2,LS,Unknown,Dunb,Eliana,6/9/07,,AM
-,D. mer,rs-b,,0:00:02,0,0,1,0,0,,0,,Unknown,Drs-b,Eliana,6/9/07,,AM
-,D. mer,rs-b,,0:00:01,0,0,0,0,0,,0,,Unknown,Drs-b,Eliana,6/9/07,,AM
-,D. mer,s-pb,,0:00:04,2,0,0,0,0,,0,,Unknown,Ds-pb,Kathy,6/11/07,,AM
-,D. mer,s-pb,,0:00:03,2,0,0,0,0,,2,,Unknown,Ds-pb,Kathy,6/11/07,,
-,D. mer,s-pb,,0:00:01,0,1,0,1,0,other woodcreeper,0,,Unknown,Ds-pb,Kathy,6/11/07,,AM
-,D. mer,ps-b,,0:00:01,0,0,0,0,0,,o,,Unknown,Dps-b,Kathy,6/11/07,,AM
-,D. mer,ps-b,,0:00:02,1,0,0,0,0,,1,,Unknown,Dps-b,Kathy,6/11/07,,AM
-,D. mer,s-yw,,0:00:01,0,0,0,0,0,,0,,Unknown,Ds-yw,Kathy,6/11/07,,AM
-,D. mer,s-pb,,0:00:01,1,0,0,0,0,,1,,Unknown,Ds-pb,Kathy,6/11/07,,AM
-,D. mer,rr-s,,0:00:04,3,0,0,1,1,rheg s-gp,1,,Unknown,Drr-s,Chris,6/11/07,,AM
-,D. mer,rr-s,,0:00:01,0,0,0,0,0,,0,,Unknown,Drr-s,Chris,6/11/07,,AM
-,D. mer,os-p,,0:00:03,3,0,0,0,1,,2,,Unknown,Dos-p,Chris,6/11/07,,AM
-,D. mer,s-yw,,0:00:01,0,0,0,0,0,,0,,Unknown,Ds-yw,Chris,6/11/07,,AM
-,D. mer,rr-s,,0:00:02,0,0,0,0,0,,0,,Unknown,Drr-s,Chris,6/11/07,,AM
-,D. mer,unb,,0:00:03,5,0,0,0,0,,3,,Unknown,Dunb,Eliana,6/11/07,,AM
-,D. mer,rs-b,,0:00:01,1,0,0,0,1,,1,,Unknown,Drs-b,Eliana,6/11/07,,AM
-,D. mer,rs-b,,0:00:02,4,0,1,0,0,,3,,Unknown,Drs-b,Eliana,6/11/07,,AM
-,D. mer,unb,,0:00:03,2,0,0,0,0,,1,,Unknown,Dunb,Eliana,6/11/07,,AM
-,D. mer,unb,,0:00:05,4,0,0,0,0,,1,,Unknown,Dunb,Eliana,6/11/07,,AM
-,D. mer,unb,,0:00:02,2,0,0,0,0,,2,,Unknown,Dunb,Eliana,6/11/07,,AM
-,D. mer,rs-b,,0:00:04,0,0,1,0,0,,0,,Unknown,Drs-b,Eliana,6/11/07,,AM
-,D. mer,rs-b,,0:00:04,2,0,1,0,0,,0,,Unknown,Drs-b,Eliana,6/11/07,,AM
-,D. mer,rs-b,,0:00:01,2,0,0,0,1,,2,,Unknown,Drs-b,Eliana,6/11/07,,AM
-,D. mer,unb,,0:00:03,1,0,0,0,0,,0,,Unknown,Dunb,Eliana,6/11/07,,AM
-,D. mer,unb,,0:00:02,2,0,0,0,0,,2,,Unknown,Dunb,Eliana,6/11/07,,AM
-,D. mer,unb,,0:00:01,4,0,0,0,0,,1,,Unknown,Dunb,Eliana,6/11/07,,AM
-,D. mer,rs-b,,0:00:03,0,0,0,0,0,,0,,Unknown,Drs-b,Eliana,6/11/07,,AM
-,D. mer,rs-b,,0:00:04,3,0,1,0,1,,2,,Unknown,Drs-b,Eliana,6/11/07,,AM
-,D. mer,rs-b,,0:00:02,4,0,0,0,2,,0,,Unknown,Drs-b,Eliana,6/11/07,,AM
-,D. mer,unb,,0:00:02,1,0,0,0,1,,0,,Unknown,Dunb,Eliana,6/11/07,,AM
-,D. mer,unb,,0:00:02,2,0,0,0,0,,1,,Unknown,Dunb,Eliana,6/11/07,,AM
-,D. mer,?,,0:00:01,1,0,0,0,0,,0,,Unknown,D?,Kathy,6/11/07,,AM
-,D. mer,s-pb,,0:00:01,0,0,0,0,0,,0,,Unknown,Ds-pb,Kathy,6/11/07,,AM
-,Rheg,unb,,0:00:01,1,0,0,0,0,,1,,Male,Runb,Eliana,6/9/07,,AM
-,Rheg,unb,,0:00:01,1,0,0,0,0,,1,,Female,Runb,Eliana,6/9/07,,AM
-,Rheg,unb,,0:00:01,9,0,0,0,0,,0,,Female,Runb,Eliana,6/9/07,,AM
-,Rheg,s-?w,,0:00:02,2,0,0,0,0,,2,,Male,Rs-?w,Kathy,6/11/07,,AM
-,Rheg,s-pp,,0:00:02,0,0,0,0,0,,0,,Female,Rs-pp,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,1,0,0,0,0,,1,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:02,1,1,0,0,0,by fortis male,1,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,3,0,0,0,0,,3,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,0,1,0,0,0,by plheg,0,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,1,0,1,0,0,by s-pp,1,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-pp,,0:00:01,1,0,0,0,0,,1,,Female,Rs-pp,Kathy,6/11/07,,AM
-,Rheg,s-pp,,0:00:01,1,0,0,0,0,,0,,Female,Rs-pp,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:02,4,0,0,0,0,,3,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-gp,,0:00:01,3,0,0,0,0,,1,,Male,Rs-gp,Chris,6/11/07,,AM
-,Rheg,s-gp,,0:00:01,1,0,0,0,0,,0,,Male,Rs-gp,Chris,6/11/07,,AM
-,Rheg,py-s,,0:00:01,4,0,0,0,0,,1,,Female,Rpy-s,Chris,6/11/07,,AM
-,Rheg,py-s,,0:00:01,1,0,0,0,0,,0,,Female,Rpy-s,Chris,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,1,0,0,,0,,1,,Male,Rs-gw,Kathy,6/9/07,,AM
-,Rheg,s-gw,,0:00:03,9,0,0,0,0,,3,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,3,0,0,0,0,,1,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,2,0,0,0,0,,0,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,2,0,0,0,0,,1,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,pp-s,,0:00:01,1,0,0,0,0,,1,,Female,Rpp-s,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,0,1,2,0,0,(rheg pp-s)  fortis male,0,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,s-gw,,0:00:01,1,0,0,0,0,,1,,Male,Rs-gw,Kathy,6/11/07,,AM
-,Rheg,pp-s,,0:00:01,0,0,0,0,0,,0,,Female,Rpp-s,Kathy,6/11/07,,AM
-,Rheg,pp-s,,0:00:01,1,0,0,1,0,by phleg,1,,Female,Rpp-s,Kathy,6/11/07,,AM
-,Rheg,pp-s,,0:00:02,2,0,0,0,0,,1,,Female,Rpp-s,Kathy,6/11/07,,AM
-,G. sal,s-yp,,0:00:01,3,0,0,0,0,,1,,Male,Gs-yp,Kathy,5/24/07,,AM
-,G. sal,unb,,0:00:01,4,0,0,0,0,,3,,Female,Gunb,Kathy,5/24/07,,AM
-,G. sal,unb,,0:00:01,0,0,0,0,0,,0,,Male,Gunb,Kathy,5/24/07,,AM
-,G. sal,unb,,0:00:02,3,0,0,0,0,,1,,Female,Gunb,Kathy,5/24/07,,AM
-,G. sal,unb,,0:00:02,1,0,0,0,0,,0,,Male,Gunb,Kathy,5/24/07,,AM
-,G. sal,unb,,0:00:02,3,0,0,0,0,,2,,Male,Gunb,Judy,5/28/07,,PM
-,G. sal,unb,,0:00:02,1,0,0,0,0,,1,,Male,Gunb,Judy,5/28/07,,PM
-,G. sal,unb,,0:00:01,1,0,0,0,0,,1,,Female,Gunb,Judy,5/28/07,,PM
-,G. sal,unb,,0:00:02,3,0,0,0,0,,1,,Male,Gunb,Nelly,5/29/07,,AM
-,G. sal,unb,,0:00:04,2,0,0,0,0,,0,,Male,Gunb,Nelly,5/29/07,,AM
-,G. sal,s-yp,,0:00:01,1,0,0,0,0,,0,,Male,Gs-yp,Kathy,6/4/07,,AM
-,G. sal,s-yp,,0:00:04,0,1,0,0,1,,0,,Male,Gs-yp,Kathy,6/4/07,,AM
-,G. sal,unb,,0:00:01,0,0,0,0,0,,0,,Female,Gunb,Judy,6/2/07,,AM
-,G. sal,unb,,0:00:01,1,0,0,0,0,,0,,Female,Gunb,Kathy,6/4/07,,AM
-,G. sal,s-yp,,0:00:01,1,0,0,0,0,,1,,Male,Gs-yp,Kathy,6/4/07,,AM
-,G. sal,unb,,0:00:02,0,0,0,0,0,,0,,Female,Gunb,Nelly,6/6/07,,AM
-,G. sal,unb,,0:00:01,1,0,0,0,0,,1,,Female,Gunb,Nelly,6/6/07,,AM
-,G. sal,unb,,0:00:01,1,1,0,0,0,by psophia,1,,Female,Gunb,Chris,6/6/07,,AM
-,G. sal,unb,,0:00:01,0,0,0,0,0,,0,,Female,Gunb,Eliana,6/7/07,,AM
-,G. sal,unb,,0:00:01,1,1,0,0,0,by rheg male,1,,Female,Gunb,Eliana,6/7/07,,AM
-,G. sal,unb,,0:00:01,2,1,0,0,0,by rheg,1,,Female,Gunb,Eliana,6/7/07,,AM
-,G. sal,unb,,0:00:01,2,0,0,0,0,,1,,Female,Gunb,Eliana,6/7/07,,AM
-,G. sal,unb,,0:00:01,2,0,0,0,0,,1,,Male,Gunb,Eliana,6/7/07,,AM
-,G. sal,unb,,0:00:00,0,0,0,0,0,,0,,Male,Gunb,Eliana,6/7/07,,AM
-,G. sal,unb,,0:00:03,3,0,0,0,0,,3,,Male,Gunb,Eliana,6/7/07,,
-,G. sal,unb,,0:00:01,0,0,0,0,0,,0,,Female,Gunb,Eliana,6/9/07,,AM
-,G. sal,unb,,0:00:01,3,0,0,0,0,,2,,Male,Gunb,Eliana,6/9/07,,AM
-,G. sal,unb,,0:00:02,1,0,0,0,0,,1,,Male,Gunb,Eliana,6/9/07,,AM
-,G. sal,s-yp,,0:00:01,1,1,0,0,0,by phleg,1,,Male,Gs-yp,Kathy,6/11/07,,AM
-,G. sal,s-yp,,0:00:01,1,0,0,0,0,,1,,Male,Gs-yp,Kathy,6/11/07,,
-,G. sal,g-ps,,0:00:01,1,1,0,0,0,by rheg,0,,Female,Gg-ps,Chris,6/11/07,,AM
-,G. sal,g-ps,,0:00:01,2,0,0,0,0,,0,,Female,Gg-ps,Chris,6/11/07,,AM
-,G. sal,s-yg,,0:00:00,1,0,0,0,0,,0,,Male,Gs-yg,Chris,6/11/07,,AM
-,G. sal,s-yp,,0:00:02,0,0,0,0,0,,0,,Male,Gs-yp,Kathy,6/11/07,,AM
-,G. sal,s-yp,,0:00:01,0,0,0,0,0,,0,,Male,Gs-yp,Kathy,6/11/07,,AM
-,G. sal,s-yp,,0:00:02,1,0,0,0,0,,1,,Male,Gs-yp,Kathy,6/11/07,,AM
-,G. sal,s-yp,,0:00:01,1,0,0,0,0,,1,,Male,Gs-yp,Kathy,6/11/07,,AM
+,M. fort,unb,,1:34:00,1,0,0,0,0,,1,LS,Male,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,1:00:00,2,0,0,0,0,,1,AS,Female,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,1:00:00,2,0,0,0,0,,1,AS,Male,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,1:32:00,0,1,0,0,0,Rheg s-gw,0,AS,Male,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,1:00:00,1,0,0,0,0,,1,AS,Female,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,1:02:00,1,0,0,0,,,1,AS,Female,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,1:51:00,0,0,0,0,0,,0,AS,Female,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,0:58:00,1,0,0,0,0,,1,AS,Female,Munb,Kathy,6/11/07,,AM
+,M. fort,unb,,1:36:00,1,0,0,0,0,,1,AS,Male,Munb,Kathy,6/11/07,,AM
+,D. mer,s-yw,,1:26:00,1,1,0,0,0,Phleg,o,SKW,Female,Ds-yw,Kathy,6/9/07,,AM
+,D. mer,s-pb,,2:20:00,1,0,0,1,0,D.ful,1,SKW,Unknown,Ds-pb,Kathy,6/9/07,,AM
+,D. mer,unb,,1:09:00,2,0,0,0,0,,2,LS,Unknown,Dunb,Eliana,6/9/07,,AM
+,D. mer,rs-b,,2:20:00,0,0,1,0,0,,0,,Unknown,Drs-b,Eliana,6/9/07,,AM
+,D. mer,rs-b,,1:45:00,0,0,0,0,0,,0,,Unknown,Drs-b,Eliana,6/9/07,,AM
+,D. mer,s-pb,,4:12:00,2,0,0,0,0,,0,,Unknown,Ds-pb,Kathy,6/11/07,,AM
+,D. mer,s-pb,,2:50:00,2,0,0,0,0,,2,,Unknown,Ds-pb,Kathy,6/11/07,,
+,D. mer,s-pb,,1:37:00,0,1,0,1,0,other woodcreeper,0,,Unknown,Ds-pb,Kathy,6/11/07,,AM
+,D. mer,ps-b,,1:18:00,0,0,0,0,0,,o,,Unknown,Dps-b,Kathy,6/11/07,,AM
+,D. mer,ps-b,,1:54:00,1,0,0,0,0,,1,,Unknown,Dps-b,Kathy,6/11/07,,AM
+,D. mer,s-yw,,1:12:00,0,0,0,0,0,,0,,Unknown,Ds-yw,Kathy,6/11/07,,AM
+,D. mer,s-pb,,1:47:00,1,0,0,0,0,,1,,Unknown,Ds-pb,Kathy,6/11/07,,AM
+,D. mer,rr-s,,4:15:00,3,0,0,1,1,rheg s-gp,1,,Unknown,Drr-s,Chris,6/11/07,,AM
+,D. mer,rr-s,,1:34:00,0,0,0,0,0,,0,,Unknown,Drr-s,Chris,6/11/07,,AM
+,D. mer,os-p,,3:10:00,3,0,0,0,1,,2,,Unknown,Dos-p,Chris,6/11/07,,AM
+,D. mer,s-yw,,1:28:00,0,0,0,0,0,,0,,Unknown,Ds-yw,Chris,6/11/07,,AM
+,D. mer,rr-s,,2:17:00,0,0,0,0,0,,0,,Unknown,Drr-s,Chris,6/11/07,,AM
+,D. mer,unb,,3:13:00,5,0,0,0,0,,3,,Unknown,Dunb,Eliana,6/11/07,,AM
+,D. mer,rs-b,,1:42:00,1,0,0,0,1,,1,,Unknown,Drs-b,Eliana,6/11/07,,AM
+,D. mer,rs-b,,1:51:00,4,0,1,0,0,,3,,Unknown,Drs-b,Eliana,6/11/07,,AM
+,D. mer,unb,,3:49:00,2,0,0,0,0,,1,,Unknown,Dunb,Eliana,6/11/07,,AM
+,D. mer,unb,,5:20:00,4,0,0,0,0,,1,,Unknown,Dunb,Eliana,6/11/07,,AM
+,D. mer,unb,,2:06:00,2,0,0,0,0,,2,,Unknown,Dunb,Eliana,6/11/07,,AM
+,D. mer,rs-b,,4:05:00,0,0,1,0,0,,0,,Unknown,Drs-b,Eliana,6/11/07,,AM
+,D. mer,rs-b,,4:05:00,2,0,1,0,0,,0,,Unknown,Drs-b,Eliana,6/11/07,,AM
+,D. mer,rs-b,,4:02:00,2,0,0,0,1,,2,,Unknown,Drs-b,Eliana,6/11/07,,AM
+,D. mer,unb,,3:46:00,1,0,0,0,0,,0,,Unknown,Dunb,Eliana,6/11/07,,AM
+,D. mer,unb,,1:54:00,2,0,0,0,0,,2,,Unknown,Dunb,Eliana,6/11/07,,AM
+,D. mer,unb,,1:45:00,4,0,0,0,0,,1,,Unknown,Dunb,Eliana,6/11/07,,AM
+,D. mer,rs-b,,2:56:00,0,0,0,0,0,,0,,Unknown,Drs-b,Eliana,6/11/07,,AM
+,D. mer,rs-b,,4:00:00,3,0,1,0,1,,2,,Unknown,Drs-b,Eliana,6/11/07,,AM
+,D. mer,rs-b,,2:23:00,4,0,0,0,2,,0,,Unknown,Drs-b,Eliana,6/11/07,,AM
+,D. mer,unb,,1:54:00,1,0,0,0,1,,0,,Unknown,Dunb,Eliana,6/11/07,,AM
+,D. mer,unb,,2:24:00,2,0,0,0,0,,1,,Unknown,Dunb,Eliana,6/11/07,,AM
+,D. mer,?,,1:46:00,1,0,0,0,0,,0,,Unknown,D?,Kathy,6/11/07,,AM
+,D. mer,s-pb,,1:03:00,0,0,0,0,0,,0,,Unknown,Ds-pb,Kathy,6/11/07,,AM
+,Rheg,unb,,1:05:00,1,0,0,0,0,,1,,Male,Runb,Eliana,6/9/07,,AM
+,Rheg,unb,,1:04:00,1,0,0,0,0,,1,,Female,Runb,Eliana,6/9/07,,AM
+,Rheg,unb,,1:04:00,0,0,0,0,0,,0,,Female,Runb,Eliana,6/9/07,,AM
+,Rheg,s-?w,,2:29:00,2,0,0,0,0,,2,,Male,Rs-?w,Kathy,6/11/07,,AM
+,Rheg,s-pp,,2:12:00,0,0,0,0,0,,0,,Female,Rs-pp,Kathy,6/11/07,,AM
+,Rheg,s-gw,,1:41:00,1,0,0,0,0,,1,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-gw,,2:37:00,1,1,0,0,0,by fortis male,1,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-gw,,1:10:00,3,0,0,0,0,,3,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-gw,,1:07:00,0,1,0,0,0,by plheg,0,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-gw,,1:03:00,1,0,1,0,0,by s-pp,1,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-pp,,1:00:00,1,0,0,0,0,,1,,Female,Rs-pp,Kathy,6/11/07,,AM
+,Rheg,s-pp,,0:56:00,1,0,0,0,0,,0,,Female,Rs-pp,Kathy,6/11/07,,AM
+,Rheg,s-gw,,2:46:00,4,0,0,0,0,,3,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-gp,,1:27:00,3,0,0,0,0,,1,,Male,Rs-gp,Chris,6/11/07,,AM
+,Rheg,s-gp,,1:46:00,1,0,0,0,0,,0,,Male,Rs-gp,Chris,6/11/07,,AM
+,Rheg,py-s,,1:27:00,4,0,0,0,0,,1,,Female,Rpy-s,Chris,6/11/07,,AM
+,Rheg,py-s,,1:04:00,1,0,0,0,0,,0,,Female,Rpy-s,Chris,6/11/07,,AM
+,Rheg,s-gw,,1:17:00,1,0,0,,0,,1,,Male,Rs-gw,Kathy,6/9/07,,AM
+,Rheg,s-gw,,3:27:00,9,0,0,0,0,,3,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-gw,,1:17:00,3,0,0,0,0,,1,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-gw,,1:26:00,2,0,0,0,0,,0,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-gw,,1:05:00,2,0,0,0,0,,1,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,pp-s,,1:09:00,1,0,0,0,0,,1,,Female,Rpp-s,Kathy,6/11/07,,AM
+,Rheg,s-gw,,1:15:00,0,1,2,0,0,(rheg pp-s)  fortis male,0,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,s-gw,,1:00:00,1,0,0,0,0,,1,,Male,Rs-gw,Kathy,6/11/07,,AM
+,Rheg,pp-s,,1:15:00,0,0,0,0,0,,0,,Female,Rpp-s,Kathy,6/11/07,,AM
+,Rheg,pp-s,,1:46:00,1,0,0,1,0,by phleg,1,,Female,Rpp-s,Kathy,6/11/07,,AM
+,Rheg,pp-s,,2:41:00,2,0,0,0,0,,1,,Female,Rpp-s,Kathy,6/11/07,,AM
+,G. sal,s-yp,,1:15:00,3,0,0,0,0,,1,,Male,Gs-yp,Kathy,5/24/07,,AM
+,G. sal,unb,,1:44:00,4,0,0,0,0,,3,,Female,Gunb,Kathy,5/24/07,,AM
+,G. sal,unb,,1:22:00,0,0,0,0,0,,0,,Male,Gunb,Kathy,5/24/07,,AM
+,G. sal,unb,,2:49:00,3,0,0,0,0,,1,,Female,Gunb,Kathy,5/24/07,,AM
+,G. sal,unb,,2:45:00,1,0,0,0,0,,0,,Male,Gunb,Kathy,5/24/07,,AM
+,G. sal,unb,,2:35:00,3,0,0,0,0,,2,,Male,Gunb,Judy,5/28/07,,PM
+,G. sal,unb,,2:13:00,1,0,0,0,0,,1,,Male,Gunb,Judy,5/28/07,,PM
+,G. sal,unb,,1:00:00,1,0,0,0,0,,1,,Female,Gunb,Judy,5/28/07,,PM
+,G. sal,unb,,2:19:00,3,0,0,0,0,,1,,Male,Gunb,Nelly,5/29/07,,AM
+,G. sal,unb,,4:30:00,2,0,0,0,0,,0,,Male,Gunb,Nelly,5/29/07,,AM
+,G. sal,s-yp,,1:16:00,1,0,0,0,0,,0,,Male,Gs-yp,Kathy,6/4/07,,AM
+,G. sal,s-yp,,4:35:00,0,1,0,0,1,,0,,Male,Gs-yp,Kathy,6/4/07,,AM
+,G. sal,unb,,1:18:00,0,0,0,0,0,,0,,Female,Gunb,Judy,6/2/07,,AM
+,G. sal,unb,,1:16:00,1,0,0,0,0,,0,,Female,Gunb,Kathy,6/4/07,,AM
+,G. sal,s-yp,,1:12:00,1,0,0,0,0,,1,,Male,Gs-yp,Kathy,6/4/07,,AM
+,G. sal,unb,,2:03:00,0,0,0,0,0,,0,,Female,Gunb,Nelly,6/6/07,,AM
+,G. sal,unb,,1:30:00,1,0,0,0,0,,1,,Female,Gunb,Nelly,6/6/07,,AM
+,G. sal,unb,,1:18:00,1,1,0,0,0,by psophia,1,,Female,Gunb,Chris,6/6/07,,AM
+,G. sal,unb,,1:16:00,0,0,0,0,0,,0,,Female,Gunb,Eliana,6/7/07,,AM
+,G. sal,unb,,1:04:00,1,1,0,0,0,by rheg male,1,,Female,Gunb,Eliana,6/7/07,,AM
+,G. sal,unb,,1:45:00,2,1,0,0,0,by rheg,1,,Female,Gunb,Eliana,6/7/07,,AM
+,G. sal,unb,,1:46:00,2,0,0,0,0,,1,,Female,Gunb,Eliana,6/7/07,,AM
+,G. sal,unb,,1:20:00,2,0,0,0,0,,1,,Male,Gunb,Eliana,6/7/07,,AM
+,G. sal,unb,,0:43:00,0,0,0,0,0,,0,,Male,Gunb,Eliana,6/7/07,,AM
+,G. sal,unb,,3:02:00,3,0,0,0,0,,3,,Male,Gunb,Eliana,6/7/07,,AM
+,G. sal,unb,,1:05:00,0,0,0,0,0,,0,,Female,Gunb,Eliana,6/9/07,,AM
+,G. sal,unb,,1:35:00,3,0,0,0,0,,2,,Male,Gunb,Eliana,6/9/07,,AM
+,G. sal,unb,,2:07:00,1,0,0,0,0,,1,,Male,Gunb,Eliana,6/9/07,,AM
+,G. sal,s-yp,,1:14:00,1,1,0,0,0,by phleg,1,,Male,Gs-yp,Kathy,6/11/07,,AM
+,G. sal,s-yp,,1:18:00,1,0,0,0,0,,1,,Male,Gs-yp,Kathy,6/11/07,,
+,G. sal,g-ps,,1:26:00,1,1,0,0,0,by rheg,0,,Female,Gg-ps,Chris,6/11/07,,AM
+,G. sal,g-ps,,1:22:00,2,0,0,0,0,,0,,Female,Gg-ps,Chris,6/11/07,,AM
+,G. sal,s-yg,,0:46:00,1,0,0,0,0,,0,,Male,Gs-yg,Chris,6/11/07,,AM
+,G. sal,s-yp,,1:51:00,0,0,0,0,0,,0,,Male,Gs-yp,Kathy,6/11/07,,AM
+,G. sal,s-yp,,1:22:00,0,0,0,0,0,,0,,Male,Gs-yp,Kathy,6/11/07,,AM
+,G. sal,s-yp,,2:10:00,1,0,0,0,0,,1,,Male,Gs-yp,Kathy,6/11/07,,AM
+,G. sal,s-yp,,1:10:00,1,0,0,0,0,,1,,Male,Gs-yp,Kathy,6/11/07,,AM
 ,G. sal,"s-yp
-",,0:00:01,1,0,0,0,0,,0,,Male,"Gs-yp
+",,1:00:00,1,0,0,0,0,,0,,Male,"Gs-yp
 ",Kathy,6/11/07,,AM
 ,D. mer,__-s,,2:05:00,1,0,0,0,0,,1,Unknown,Unknown,D__-s,Eliana,6/9/07,,AM
 ,D. mer,UNB,,3:28:00,1,0,1,0,0,,1,Unknown,Unknown,DUNB,Eliana,6/9/07,,AM
@@ -410,26 +410,26 @@ obsid,species,colors,time,duration,attempts,Rinter,Rintra,Iinter,Iintra,Notes,Su
 ,Phleg,unb,,1:42:00,3,0,0,0,0,,2,AZS,Unknown,Punb,Kathy,6/1/07,,AM
 ,Phleg,unb,,2:12:00,3,0,0,0,0,,2,AZS,Unknown,Punb,Kathy,6/1/07,,AM
 ,Phleg,UNB,,2:06:00,0,0,0,0,0,,0,SKW,Unknown,PUNB,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:03,3,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:02,2,0,0,1,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:01,1,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:01,2,0,0,1,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:02,1,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:01,0,0,1,0,0,,0,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,pp-s,,0:00:01,1,0,0,0,0,,0,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
-,Phleg,pp-s,,0:00:02,1,0,1,0,0,,0,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
-,Phleg,pp-s,,0:00:01,2,0,0,1,0,,2,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
-,Phleg,pp-s,,0:00:04,10,0,1,0,1,,6,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
-,Phleg,pp-s,,0:00:02,1,0,0,0,0,,0,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:02,2,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:01,1,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:01,1,0,0,1,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,pp-s,,0:00:01,4,0,0,0,0,,2,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:01,2,0,0,0,2,,2,SKW,Unknown,Punb,Kathy,6/4/07,,AM
-,Phleg,pp-s,,0:00:01,0,0,0,0,1,,0,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
-,Phleg,unb,,0:00:01,0,0,0,0,0,,0,AS,Unknown,Punb,Kathy,6/4/07,Yes,AM
-,Phleg,pp-s,,0:00:02,2,0,0,0,0,,1,AS,Unknown,Ppp-s,Kathy,6/4/07,,AM
-,Phleg,UNB,,0:00:04,4,0,0,0,0,,1,AS,Unknown,PUNB,Kathy,6/4/07,Yes,AM
+,Phleg,unb,,3:02:00,3,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,unb,,1:52:00,2,0,0,1,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,unb,,1:47:00,1,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,unb,,1:02:00,2,0,0,1,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,unb,,2:39:00,1,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,unb,,1:15:00,0,0,1,0,0,,0,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,pp-s,,1:25:00,1,0,0,0,0,,0,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
+,Phleg,pp-s,,2:40:00,1,0,1,0,0,,0,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
+,Phleg,pp-s,,1:45:00,2,0,0,1,0,,2,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
+,Phleg,pp-s,,3:51:00,10,0,1,0,1,,6,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
+,Phleg,pp-s,,2:47:00,1,0,0,0,0,,0,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
+,Phleg,unb,,2:32:00,2,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,unb,,1:03:00,1,0,0,0,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,unb,,1:01:00,1,0,0,1,0,,1,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,pp-s,,1:36:00,4,0,0,0,0,,2,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
+,Phleg,unb,,1:07:00,2,0,0,0,2,,2,SKW,Unknown,Punb,Kathy,6/4/07,,AM
+,Phleg,pp-s,,1:10:00,0,0,0,0,1,,0,SKW,Unknown,Ppp-s,Kathy,6/4/07,,AM
+,Phleg,unb,,1:35:00,0,0,0,0,0,,0,AS,Unknown,Punb,Kathy,6/4/07,Yes,AM
+,Phleg,pp-s,,2:04:00,2,0,0,0,0,,1,AS,Unknown,Ppp-s,Kathy,6/4/07,,AM
+,Phleg,UNB,,4:02:00,4,0,0,0,0,,1,AS,Unknown,PUNB,Kathy,6/4/07,Yes,AM
 ,Phleg,UNB,,1:50:00,2,0,0,0,0,,0,AS,Unknown,PUNB,Kathy,6/4/07,Yes,AM
 ,Phleg,UNB,,1:33:00,1,0,0,0,0,,1,AS,Unknown,PUNB,Kathy,6/4/07,,AM
 ,Phleg,pp-s,,1:00:00,1,0,0,0,0,,1,AS,Unknown,Ppp-s,Kathy,6/4/07,,AM
@@ -529,100 +529,100 @@ obsid,species,colors,time,duration,attempts,Rinter,Rintra,Iinter,Iintra,Notes,Su
 ,G. sal,s-gr,,2:08:00,0,1,0,0,0,displaced by rheg,0,,Female,Gs-gr,Chris,6/12/07,,AM
 ,G. sal,s-yg,,1:59:00,3,0,0,0,0,,1,,Male,Gs-yg,Kathy,6/12/07,,AM
 ,,,,,,0,0,0,0,,,,,,,,,
-,M. fort,unb,,0:00:01,0,1,0,1,0,(i inter-Gymno) (r inter-Phleg),0,SKW,Male,Munb,Rani,6/14/07,,AM
-,M. fort,unb,,0:00:04,2,0,0,0,0,,1,SKW,Male,Munb,Rani,6/14/07,,AM
-,M. fort,unb,,0:00:03,2,0,0,0,0,,1,SKW,Male,Munb,Rani,6/14/07,,AM
-,M. fort,unb,,0:00:02,1,0,0,0,0,,1,SKW,Male,Munb,Rani,6/14/07,,AM
-,M. fort,unb,,0:00:02,2,0,0,1,0,rheg f,2,SKW,Female,Munb,Rani,6/14/07,,AM
-,M. fort,unb,,0:00:00,1,0,0,0,0,,1,SKW,Female,Munb,Rani,6/14/07,,AM
-,M. fort,unb,,0:00:01,1,0,0,0,0,,1,LC,Male,Munb,Rani,6/15/07,,AM
-,M. fort,unb,,0:00:00,1,0,0,0,0,,0,LC,Male,Munb,Rani,6/15/07,,AM
-,Rheg,unb,,0:00:02,1,0,0,1,0,gymno,1,SKW,Female,Runb,Rani,6/14/07,,AM
-,Rheg,unb,,0:00:03,5,1,0,2,0,by fortis,4,SKW,Female,Runb,Rani,6/14/07,,AM
-,Rheg,unb,,0:00:01,1,0,0,0,0,,1,SKW,Female,Runb,Rani,6/14/07,,AM
-,Rheg,unk,,0:00:01,3,0,0,0,0,,1,SKW,Male,Runk,Rani,6/14/07,,AM
-,Rheg,unb,,0:00:01,0,0,0,0,0,,0,SKW,Female,Runb,Rani,6/14/07,,AM
-,Rheg,s-pp,,0:00:01,0,0,1,0,1,,0,,Female,Rs-pp,Rani,6/14/07,,AM
-,Rheg,s-pp,,0:00:01,1,0,0,0,0,,1,,Female,Rs-pp,Rani,6/14/07,,AM
-,Rheg,s-pp,,0:00:01,2,0,1,0,0,,2,,Female,Rs-pp,Rani,6/14/07,,
-,Rheg,s-pp,,0:00:01,0,0,0,0,0,,0,SKW,Female,Rs-pp,Rani,6/14/07,,AM
-,Rheg,unb,,0:00:01,2,0,0,0,0,,2,,Female,Runb,Rani,6/14/07,,AM
-,Rheg,unb,,0:00:02,5,0,0,0,0,,4,,Female,Runb,Rani,6/14/07,,AM
-,Rheg,unb,,0:00:01,3,1,0,0,0,m.fortis female,2,SKW,Female,Runb,Rani,6/14/07,,AM
-,Rheg,unb,,0:00:01,1,0,0,0,0,,0,,Female,Runb,Rani,6/14/07,,AM
-,Rheg,unb,,0:00:02,0,0,0,0,0,,0,,Female,Runb,Rani,6/14/07,,AM
-,Rheg,unb,,0:00:01,4,0,0,0,0,,2,,Female,Runb,Rani,6/15/07,,AM
-,Rheg,unb,,0:00:00,2,0,0,0,0,,0,,Female,Runb,Rani,6/15/07,,AM
-,Rheg,s-pp,,0:00:02,2,0,0,0,0,,1,,Female,Rs-pp,Rani,6/15/07,,AM
-,Rheg,unb,,0:00:01,2,2,0,0,0,by phleg,0,,Female,Runb,Rani,6/15/07,,AM
-,Rheg,py-s,,0:00:01,2,2,0,0,0,by phleg,1,,Female,Rpy-s,Rani,6/15/07,,AM
-,Rheg,s-gw,,0:00:01,3,0,0,0,0,,1,,Male,Rs-gw,Rani,6/15/07,,AM
-,Rheg,unb,,0:00:01,0,0,0,0,0,,0,,Male,Runb,Rani,6/15/07,,AM
-,Rheg,unb,,0:00:01,3,0,0,0,0,,1,,Male,Runb,Rani,6/15/07,,AM
-,Rheg,unb,,0:00:03,5,0,0,0,0,,1,,Female,Runb,Rani,6/15/07,,AM
-,Rheg,s-gw,,0:00:01,3,1,0,0,0,by pheg,0,,Male,Rs-gw,Rani,6/15/07,,AM
-,Rheg,unb,,0:00:01,3,0,0,0,0,,1,,Female,Runb,Rani,6/15/07,,AM
-,Rheg,unb,,0:00:01,2,0,1,0,0, s-gw,0,,Male,Runb,Rani,6/15/07,,AM
-,Rheg,unb,,0:00:01,3,0,0,0,0,,0,,Female,Runb,Rani,6/15/07,,AM
-,Rheg,s-gw,,0:00:01,2,0,1,0,0,,0,,Male,Rs-gw,Rani,6/15/07,,AM
-,Rheg,s-gw,,0:00:01,1,1,0,0,0,by a phleg,1,,Male,Rs-gw,Rani,6/15/07,,AM
-,Rheg,s-gp,,0:00:02,2,0,0,0,0,,1,,Male,Rs-gp,Rani,6/15/07,,AM
-,G. sal,s-gr,,0:00:01,2,1,0,0,0,by a rheg,1,,Female,Gs-gr,Rani,6/14/07,,AM
-,G. sal,unb,,0:00:01,1,0,0,0,0,,1,,Male,Gunb,Rani,6/14/07,,AM
-,G. sal,s-gr,,0:00:03,6,0,0,0,0,,2,,Female,Gs-gr,Rani,6/14/07,,AM
-,G. sal,unb,,0:00:02,0,1,1,0,0,phleg,0,,Male,Gunb,Rani,6/14/07,,AM
-,G. sal,s-gr,,0:00:03,1,0,0,0,0,,1,,Female,Gs-gr,Rani,6/14/07,,AM
-,G. sal,s-gr,,0:00:01,1,3,0,0,0,rheg,0,,Female,Gs-gr,Rani,6/14/07,,AM
-,G. sal,s-gr,,0:00:04,2,0,0,0,0,,2,,Female,Gs-gr,Rani,6/14/07,,AM
-,G. sal,s-gr,,0:00:02,3,1,0,0,0,rheg,2,,Female,Gs-gr,Rani,6/14/07,,AM
-,G. sal,s-gr,,0:00:01,1,0,0,0,0,,1,,Female,Gs-gr,Rani,6/14/07,,AM
-,G. sal,s-gr,,0:00:02,0,0,0,0,0,,0,,Female,Gs-gr,Rani,6/14/07,,AM
-,G. sal,s-gr,,0:00:01,0,0,0,0,0,,0,,Female,Gs-gr,Rani,6/14/07,,AM
-,G. sal,unb,,0:00:01,1,0,0,0,0,,1,,Male,Gunb,Rani,6/14/07,Yes,AM
-,G. sal,unb,,0:00:01,2,0,0,0,0,,0,,Male,Gunb,Rani,6/15/07,,AM
+,M. fort,unb,,1:21:00,0,1,0,1,0,(i inter-Gymno) (r inter-Phleg),0,SKW,Male,Munb,Rani,6/14/07,,AM
+,M. fort,unb,,4:04:00,2,0,0,0,0,,1,SKW,Male,Munb,Rani,6/14/07,,AM
+,M. fort,unb,,3:37:00,2,0,0,0,0,,1,SKW,Male,Munb,Rani,6/14/07,,AM
+,M. fort,unb,,1:50:00,1,0,0,0,0,,1,SKW,Male,Munb,Rani,6/14/07,,AM
+,M. fort,unb,,1:52:00,2,0,0,1,0,rheg f,2,SKW,Female,Munb,Rani,6/14/07,,AM
+,M. fort,unb,,0:48:00,1,0,0,0,0,,1,SKW,Female,Munb,Rani,6/14/07,,AM
+,M. fort,unb,,1:27:00,1,0,0,0,0,,1,LC,Male,Munb,Rani,6/15/07,,AM
+,M. fort,unb,,0:48:00,1,0,0,0,0,,0,LC,Male,Munb,Rani,6/15/07,,AM
+,Rheg,unb,,2:41:00,1,0,0,1,0,gymno,1,SKW,Female,Runb,Rani,6/14/07,,AM
+,Rheg,unb,,2:50:00,5,1,0,2,0,by fortis,4,SKW,Female,Runb,Rani,6/14/07,,AM
+,Rheg,unb,,1:09:00,1,0,0,0,0,,1,SKW,Female,Runb,Rani,6/14/07,,AM
+,Rheg,unk,,1:14:00,3,0,0,0,0,,1,SKW,Male,Runk,Rani,6/14/07,,AM
+,Rheg,unb,,2:12:00,0,0,0,0,0,,0,SKW,Female,Runb,Rani,6/14/07,,AM
+,Rheg,s-pp,,0:57:00,0,0,1,0,1,,0,,Female,Rs-pp,Rani,6/14/07,,AM
+,Rheg,s-pp,,1:14:00,1,0,0,0,0,,1,,Female,Rs-pp,Rani,6/14/07,,AM
+,Rheg,s-pp,,1:28:00,2,0,1,0,0,,2,,Female,Rs-pp,Rani,6/14/07,,
+,Rheg,s-pp,,1:07:00,0,0,0,0,0,,0,SKW,Female,Rs-pp,Rani,6/14/07,,AM
+,Rheg,unb,,1:00:00,2,0,0,0,0,,2,,Female,Runb,Rani,6/14/07,,AM
+,Rheg,unb,,2:14:00,5,0,0,0,0,,4,,Female,Runb,Rani,6/14/07,,AM
+,Rheg,unb,,1:33:00,3,1,0,0,0,m.fortis female,2,SKW,Female,Runb,Rani,6/14/07,,AM
+,Rheg,unb,,1:42:00,1,0,0,0,0,,0,,Female,Runb,Rani,6/14/07,,AM
+,Rheg,unb,,1:51:00,0,0,0,0,0,,0,,Female,Runb,Rani,6/14/07,,AM
+,Rheg,unb,,1:08:00,5,0,0,0,0,,2,,Female,Runb,Rani,6/15/07,,AM
+,Rheg,unb,,0:41:00,2,0,0,0,0,,0,,Female,Runb,Rani,6/15/07,,AM
+,Rheg,s-pp,,2:42:00,2,0,0,0,0,,1,,Female,Rs-pp,Rani,6/15/07,,AM
+,Rheg,unb,,1:15:00,2,2,0,0,0,by phleg,0,,Female,Runb,Rani,6/15/07,,AM
+,Rheg,py-s,,1:17:00,2,2,0,0,0,by phleg,1,,Female,Rpy-s,Rani,6/15/07,,AM
+,Rheg,s-gw,,1:33:00,3,0,0,0,0,,1,,Male,Rs-gw,Rani,6/15/07,,AM
+,Rheg,unb,,1:30:00,0,0,0,0,0,,0,,Male,Runb,Rani,6/15/07,,AM
+,Rheg,unb,,1:40:00,3,0,0,0,0,,1,,Male,Runb,Rani,6/15/07,,AM
+,Rheg,unb,,2:58:00,5,0,0,0,0,,1,,Female,Runb,Rani,6/15/07,,AM
+,Rheg,s-gw,,1:35:00,3,1,0,0,0,by pheg,0,,Male,Rs-gw,Rani,6/15/07,,AM
+,Rheg,unb,,1:24:00,3,0,0,0,0,,1,,Female,Runb,Rani,6/15/07,,AM
+,Rheg,unb,,1:13:00,2,0,1,0,0, s-gw,0,,Male,Runb,Rani,6/15/07,,AM
+,Rheg,unb,,1:21:00,3,0,0,0,0,,0,,Female,Runb,Rani,6/15/07,,AM
+,Rheg,s-gw,,1:38:00,2,0,1,0,0,,0,,Male,Rs-gw,Rani,6/15/07,,AM
+,Rheg,s-gw,,1:00:00,1,1,0,0,0,by a phleg,1,,Male,Rs-gw,Rani,6/15/07,,AM
+,Rheg,s-gp,,1:55:00,2,0,0,0,0,,1,,Male,Rs-gp,Rani,6/15/07,,AM
+,G. sal,s-gr,,1:13:00,2,1,0,0,0,by a rheg,1,,Female,Gs-gr,Rani,6/14/07,,AM
+,G. sal,unb,,1:34:00,1,0,0,0,0,,1,,Male,Gunb,Rani,6/14/07,,AM
+,G. sal,s-gr,,3:28:00,6,0,0,0,0,,2,,Female,Gs-gr,Rani,6/14/07,,AM
+,G. sal,unb,,2:28:00,0,1,1,0,0,phleg,0,,Male,Gunb,Rani,6/14/07,,AM
+,G. sal,s-gr,,3:34:00,1,0,0,0,0,,1,,Female,Gs-gr,Rani,6/14/07,,AM
+,G. sal,s-gr,,1:41:00,1,3,0,0,0,rheg,0,,Female,Gs-gr,Rani,6/14/07,,AM
+,G. sal,s-gr,,3:51:00,2,0,0,0,0,,2,,Female,Gs-gr,Rani,6/14/07,,AM
+,G. sal,s-gr,,2:31:00,3,1,0,0,0,rheg,2,,Female,Gs-gr,Rani,6/14/07,,AM
+,G. sal,s-gr,,1:49:00,1,0,0,0,0,,1,,Female,Gs-gr,Rani,6/14/07,,AM
+,G. sal,s-gr,,2:01:00,0,0,0,0,0,,0,,Female,Gs-gr,Rani,6/14/07,,AM
+,G. sal,s-gr,,1:00:00,0,0,0,0,0,,0,,Female,Gs-gr,Rani,6/14/07,,AM
+,G. sal,unb,,1:12:00,1,0,0,0,0,,1,,Male,Gunb,Rani,6/14/07,Yes,AM
+,G. sal,unb,,0:56:00,2,0,0,0,0,,0,,Male,Gunb,Rani,6/15/07,,AM
 ,,,,,,0,0,0,0,,,,,,,,,
-,M. fort,unb,,0:00:01,3,0,0,0,0,,3,,Female,Munb,Rani,6/15/07,,PM
-,M. fort,unb,,0:00:02,3,0,0,0,0,,0,,Female,Munb,Rani,6/15/07,,PM
-,M. fort,unb,,0:00:02,1,0,0,0,0,,1,,Female,Munb,Rani,6/15/07,,PM
-,M. fort,unb,,0:00:02,3,0,0,0,0,,2,,Male,Munb,Chris,6/16/07,,PM
-,M. fort,unb,,0:00:04,3,0,0,1,0,Rheg,0,,Male,Munb,Chris,6/16/07,,PM
-,M. fort,unb,,0:00:03,0,0,0,0,0,,0,,Unknown,Munb,Chris,6/18/07,,PM
-,M. fort,unb,,0:00:02,3,0,0,1,0,Gymno,1,,Male,Munb,Nelly,6/19/07,,AM
-,M. fort,unb,,0:00:02,5,0,0,1,0,rheg,4,,Male,Munb,Nelly,6/19/07,,AM
-,M. fort,unb,,0:00:01,2,0,0,0,0,,1,,Male,Munb,Nelly,6/19/07,,AM
-,M. fort,unb,,0:00:01,0,0,0,1,0,rheg,0,,Male,Munb,Nelly,6/19/07,,AM
-,M. fort,unb,,0:00:00,1,0,0,0,0,,1,,Male,Munb,Chris,6/19/07,,AM
-,M. fort,unb,,0:00:01,1,0,0,0,0,,1,,Male,Munb,Chris,6/19/07,,AM
-,M. fort,unb,,0:00:01,2,0,0,0,0,,1,,Female,Munb,Chris,6/19/07,,AM
-,M. fort,rr-s,,0:00:00,2,0,0,0,0,,1,,Female,Mrr-s,Chris,6/19/07,,AM
-,M. fort,unb,,0:00:01,2,0,0,0,0,,1,,Male,Munb,Chris,6/19/07,,AM
-,D. mer,s-gw,,0:00:01,0,0,0,0,0,,0,,Unknown,Ds-gw,Rani,6/15/07,,PM
-,D. mer,os-g,,0:00:01,0,1,0,0,0,D.picunis,0,,Unknown,Dos-g,Rani,6/15/07,,PM
-,D. mer,?,,0:00:03,0,0,0,0,0,,0,,Unknown,D?,Rani,6/15/07,,PM
-,D. mer,?,,0:00:01,1,0,0,0,0,,1,,Unknown,D?,Rani,6/15/07,,PM
-,D. mer,?w-?,,0:00:01,0,0,0,0,0,,0,,Unknown,D?w-?,Rani,6/15/07,,PM
+,M. fort,unb,,1:29:00,3,0,0,0,0,,3,,Female,Munb,Rani,6/15/07,,PM
+,M. fort,unb,,2:18:00,3,0,0,0,0,,0,,Female,Munb,Rani,6/15/07,,PM
+,M. fort,unb,,2:15:00,1,0,0,0,0,,1,,Female,Munb,Rani,6/15/07,,PM
+,M. fort,unb,,2:04:00,3,0,0,0,0,,2,,Male,Munb,Chris,6/16/07,,PM
+,M. fort,unb,,4:31:00,3,0,0,1,0,Rheg,0,,Male,Munb,Chris,6/16/07,,PM
+,M. fort,unb,,3:18:00,0,0,0,0,0,,0,,Unknown,Munb,Chris,6/18/07,,PM
+,M. fort,unb,,2:06:00,3,0,0,1,0,Gymno,1,,Male,Munb,Nelly,6/19/07,,AM
+,M. fort,unb,,2:46:00,5,0,0,1,0,rheg,4,,Male,Munb,Nelly,6/19/07,,AM
+,M. fort,unb,,1:30:00,2,0,0,0,0,,1,,Male,Munb,Nelly,6/19/07,,AM
+,M. fort,unb,,1:40:00,0,0,0,1,0,rheg,0,,Male,Munb,Nelly,6/19/07,,AM
+,M. fort,unb,,0:44:00,1,0,0,0,0,,1,,Male,Munb,Chris,6/19/07,,AM
+,M. fort,unb,,1:38:00,1,0,0,0,0,,1,,Male,Munb,Chris,6/19/07,,AM
+,M. fort,unb,,0:57:00,2,0,0,0,0,,1,,Female,Munb,Chris,6/19/07,,AM
+,M. fort,rr-s,,0:46:00,2,0,0,0,0,,1,,Female,Mrr-s,Chris,6/19/07,,AM
+,M. fort,unb,,1:32:00,2,0,0,0,0,,1,,Male,Munb,Chris,6/19/07,,AM
+,D. mer,s-gw,,1:33:00,0,0,0,0,0,,0,,Unknown,Ds-gw,Rani,6/15/07,,PM
+,D. mer,os-g,,1:00:00,0,1,0,0,0,D.picunis,0,,Unknown,Dos-g,Rani,6/15/07,,PM
+,D. mer,?,,3:10:00,0,0,0,0,0,,0,,Unknown,D?,Rani,6/15/07,,PM
+,D. mer,?,,1:45:00,1,0,0,0,0,,1,,Unknown,D?,Rani,6/15/07,,PM
+,D. mer,?w-?,,1:09:00,0,0,0,0,0,,0,,Unknown,D?w-?,Rani,6/15/07,,PM
 ,,s-pb,,0:00:01,1,0,0,0,0,,1,,Unknown,s-pb,Rani,6/15/07,,PM
-,D. mer,??-s,,0:00:01,0,0,0,0,0,,0,,Unknown,D??-s,Rani,6/15/07,,PM
-,D. mer,rr-s,,0:00:05,3,1,0,0,0,by rheg male,3,,Unknown,Drr-s,Rani,6/15/07,,PM
-,D. mer,??-s,,0:00:01,0,0,0,0,0,,0,,Unknown,D??-s,Rani,6/15/07,,PM
-,D. mer,os-g,,0:00:04,0,0,0,0,0,,0,,Unknown,Dos-g,Rani,6/15/07,,PM
-,D. mer,s-wg/gw,,0:00:03,0,0,0,0,0,,0,,Unknown,Ds-wg/gw,Rani,6/15/07,,PM
-,D. mer,?,,0:00:04,0,0,0,0,0,,0,,Unknown,D?,Rani,6/15/07,,PM
-,D. mer,unb,,0:00:02,0,0,0,0,0,,0,,Unknown,Dunb,Rani,6/16/07,,AM
-,D. mer,unb,,0:00:01,1,1,0,0,0,by D. picunis,0,,Unknown,Dunb,Rani,6/16/07,,AM
-,D. mer,unb,,0:00:01,1,0,0,0,0,,0,,Unknown,Dunb,Rani,6/16/07,,AM
-,D. mer,rr-s,,0:00:00,1,0,0,0,0,,0,,Unknown,Drr-s,Rani,6/16/07,,AM
-,D. mer,rr-s,,0:00:02,0,0,0,0,0,,0,,Unknown,Drr-s,Rani,6/16/07,,AM
-,D. mer,?,,0:00:01,0,0,1,0,0,,0,,Unknown,D?,Chris,6/16/07,,AM
-,D. mer,s-yw,,0:00:01,1,0,0,0,0,,1,,Unknown,Ds-yw,Chris,6/16/07,,AM
-,D. mer,s-yw,,0:00:01,2,0,0,0,0,,1,,Unknown,Ds-yw,Chris,6/16/07,,AM
-,D. mer,s-yw,,0:00:01,0,0,0,0,0,,0,,Unknown,Ds-yw,Chris,6/16/07,,AM
-,D. mer,unb,,0:00:04,0,0,0,0,0,,0,,Unknown,Dunb,Kathy,6/18/07,,AM
-,D. mer,rr-s,,0:00:02,1,0,0,0,0,,1,,Unknown,Drr-s,Nelly,6/19/07,,AM
-,D. mer,rr-s,,0:00:01,1,0,0,0,0,,1,,Unknown,Drr-s,Nelly,6/19/07,,AM
-,D. mer,rr-s,,0:00:01,1,0,0,0,0,,1,,Unknown,Drr-s,Nelly,6/19/07,,AM
-,D. mer,unb,,0:00:01,0,0,0,0,0,,0,,Unknown,Dunb,Norma-Jean,6/19/07,,AM
-,D. mer,unb,,0:00:01,0,0,0,0,0,,0,,Unknown,Dunb,Norma-Jean,6/19/07,,AM
+,D. mer,??-s,,1:30:00,0,0,0,0,0,,0,,Unknown,D??-s,Rani,6/15/07,,PM
+,D. mer,rr-s,,5:39:00,3,1,0,0,0,by rheg male,3,,Unknown,Drr-s,Rani,6/15/07,,PM
+,D. mer,??-s,,1:40:00,0,0,0,0,0,,0,,Unknown,D??-s,Rani,6/15/07,,PM
+,D. mer,os-g,,4:07:00,0,0,0,0,0,,0,,Unknown,Dos-g,Rani,6/15/07,,PM
+,D. mer,s-wg/gw,,3:40:00,0,0,0,0,0,,0,,Unknown,Ds-wg/gw,Rani,6/15/07,,PM
+,D. mer,?,,4:46:00,0,0,0,0,0,,0,,Unknown,D?,Rani,6/15/07,,PM
+,D. mer,unb,,2:05:00,0,0,0,0,0,,0,,Unknown,Dunb,Rani,6/16/07,,AM
+,D. mer,unb,,1:04:00,1,1,0,0,0,by D. picunis,0,,Unknown,Dunb,Rani,6/16/07,,AM
+,D. mer,unb,,1:45:00,1,0,0,0,0,,0,,Unknown,Dunb,Rani,6/16/07,,AM
+,D. mer,rr-s,,0:49:00,1,0,0,0,0,,0,,Unknown,Drr-s,Rani,6/16/07,,AM
+,D. mer,rr-s,,2:32:00,0,0,0,0,0,,0,,Unknown,Drr-s,Rani,6/16/07,,AM
+,D. mer,?,,1:08:00,0,0,1,0,0,,0,,Unknown,D?,Chris,6/16/07,,AM
+,D. mer,s-yw,,1:17:00,1,0,0,0,0,,1,,Unknown,Ds-yw,Chris,6/16/07,,AM
+,D. mer,s-yw,,1:03:00,2,0,0,0,0,,1,,Unknown,Ds-yw,Chris,6/16/07,,AM
+,D. mer,s-yw,,1:30:00,0,0,0,0,0,,0,,Unknown,Ds-yw,Chris,6/16/07,,AM
+,D. mer,unb,,4:11:00,0,0,0,0,0,,0,,Unknown,Dunb,Kathy,6/18/07,,AM
+,D. mer,rr-s,,2:19:00,1,0,0,0,0,,1,,Unknown,Drr-s,Nelly,6/19/07,,AM
+,D. mer,rr-s,,1:08:00,1,0,0,0,0,,1,,Unknown,Drr-s,Nelly,6/19/07,,AM
+,D. mer,rr-s,,1:38:00,1,0,0,0,0,,1,,Unknown,Drr-s,Nelly,6/19/07,,AM
+,D. mer,unb,,1:23:00,0,0,0,0,0,,0,,Unknown,Dunb,Norma-Jean,6/19/07,,AM
+,D. mer,unb,,1:27:00,0,0,0,0,0,,0,,Unknown,Dunb,Norma-Jean,6/19/07,,AM
 ,D. mer,unb,,1:08:00,0,0,0,0,0,,0,,Unknown,Dunb,Norma-Jean,6/19/07,,AM
 ,M. fort,unb,,1:11:00,0,0,0,1,0,rheg,0,LC,Male,Munb,Chris,6/20/07,,AM
 ,M. fort,rr-s,,3:06:00,1,0,0,0,0,,1,LC,Female,Mrr-s,Chris,6/20/07,,AM
@@ -642,7 +642,7 @@ obsid,species,colors,time,duration,attempts,Rinter,Rintra,Iinter,Iintra,Notes,Su
 ,D. mer,unk,,1:07:00,1,0,0,0,0,,1,,Unknown,Dunk,Rani,6/20/07,,AM
 ,D. mer,unk,,2:42:00,1,0,0,0,0,,1,,Unknown,Dunk,Kathy,6/21/07,,AM
 ,D. mer,unk,,1:07:00,0,0,0,0,0,,0,,Unknown,Dunk,Kathy,6/21/07,,AM
-,Rheg,s-gw,,1:13:00,5,0,0,0,0,,4,,Male,Rs-gw,Rani,6/15/07,,PM
+,Rheg,s-gw,,1:21:00,5,0,0,0,0,,4,,Male,Rs-gw,Rani,6/15/07,,PM
 ,Rheg,s-gp,,1:13:00,1,2,0,0,0,fortis,1,,Male,Rs-gp,Chris,6/16/07,,PM
 ,Rheg,s-gp,,4:50:00,0,0,0,0,0,,0,,Male,Rs-gp,Chris,6/16/07,,PM
 ,Rheg,s-gp,,3:45:00,2,1,0,0,0,fortis,1,,Male,Rs-gp,Chris,6/16/07,,PM

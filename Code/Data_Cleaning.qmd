@@ -88,6 +88,10 @@ bird |>
   filter(duration == "0:00:05")
 # all from 2007, only 2 rows
 
+bird |>
+  filter(duration == "0:00:00")
+
+
 # considering there are multiple entries for these values I am unsure whether or not this is a typo
 # but it also seems unlikely that a bird could make 10 attempts in 0.4 seconds?
 
@@ -106,23 +110,24 @@ raw2007 <- read.csv(here("Data/raw/For.Bouts2007.csv"))
 See if there's any durations that are in miliseconds
 ```{r}
 raw2007 |>
-  filter(duration == "0:00:01")
+  filter(duration == "00:00:01")
 
 raw2007 |>
-  filter(duration == "0:00:02")
+  filter(duration == "00:00:02")
 
 raw2007 |>
-  filter(duration == "0:00:04")
+  filter(duration == "00:00:04")
 
 raw2007 |>
-  filter(duration == "0:00:03")
+  filter(duration == "00:00:03")
   
 raw2007 |>
-  filter(duration == "0:00:05")
+  filter(duration == "00:00:05")
 
-## This is saying there's no rows, but when I looked at the dataset there is......
+raw2007 |>
+  filter(duration == "00:00:00")
 
-## also noticing that the rows with 00:00:00 have attempts.... that's not possible
+
 ```
 ```{r}
 # brainstorm of process: filter for just the 2007 to see if they just did complete cases in bird
@@ -166,18 +171,164 @@ raw2007[323, ]
 # they do line up - but also they both have duration 0:00:01
 ```
 
-### Remove the rows that are weird and see what we're left with
+### further filtering to check with paper data
 
+```{r}
+badrows_bird <- birdfilter07 |>
+  filter(duration %in% c("0:00:00", "0:00:01", "0:00:02", "0:00:03", "0:00:04", "0:00:05"))
+     
+badrows_rawdata <- raw2007 |>
+  filter(duration %in% c("00:00:00", "00:00:01", "00:00:02", "00:00:03", "00:00:04", "00:00:05"))
+# both datasets match up
+```
+
+```{r}
+badrows_Phleg <- badrows_bird |>
+  filter(species == "Phleg")
+# 20 rows with Phleg
+
+badrows_Rheg <- badrows_bird |>
+  filter(species == "Rheg")
+# 58 rows with Rheg
+
+badrows_Dmer <- badrows_bird |>
+  filter(species == "D. mer")
+# 63 rows with D. mer
+
+badrows_Gsal <- badrows_bird |>
+  filter(species == "G. sal")
+# 51 rows with G. sal
+
+badrows_Mfort <- badrows_bird |>
+  filter(species == "M. fort")
+# 37 rows with M. fort
+
+badrows_Phleg
+badrows_Rheg
+badrows_Mfort
+badrows_Gsal
+badrows_Dmer
+
+```
+
+Phleg bad rows 
+- Kathy 06/04 (20) -- FIXED BOTH
+
+Rheg bad rows are from multiple days and colonies
+- Eliana AM 06/09 (3) -- FIXED BOTH
+- Kathy AM 06/11 (10) -- FIXED BOTH
+- Chris AM 06/11 (4) -- FIXED BOTH
+- Kathy AM 06/09 (1) -- FIXED BOTH
+- Kathy AM 06/11 (10) -- FIXED BOTH
+- Rani AM 06/14 (14) - FIXED BOTH
+- Rani AM 06/15 (16) - FIXED BOTH
+
+M. fort bad rows:
+- Kathy AM 06/11 (14) -- FIXED BOTH
+- Rani AM 06/14 (6) -- FIXED BOTH
+- Rani AM 06/15 (2) -- FIXED BOTH
+- Rani PM 06/15 (3) -- FIXED BOTH
+- Chris PM 06/16 (2) -- FIXED BOTH
+- Chris PM 06/18 (1) -- FIXED BOTH
+- Nelly AM 06/19 (4) -- FIXED BOTH
+- Chris AM 06/19 (5) -- FIXED BOTH
+
+G. sal bad rows
+- Kathy AM 05/24 (5) -- FIXED BOTH
+- Judy PM 05/28 (3) -- FIXED BOTH
+- Nelly AM 05/29 (2) -- FIXED BOTH
+- Kathy AM 06/04 (2) -- FIXED BOTH
+- Judy AM 06/02 (1) -- FIXED BOTH
+- Kathy AM 06/04 (2) -- FIXED BOTH
+- Nelly AM 06/06 (2) -- FIXED BOTH
+- Chris AM 06/06 (1) -- FIXED BOTH
+- Eliana AM 06/07 (7) -- FIXED BOTH
+- Eliana AM 06/09 (2) -- FIXED BOTH
+- Kathy AM 06/11 (2) -- FIXED BOTH
+- Chris AM 06/11 (3) -- FIXED BOTH
+- Kathy AM 06/11 (5) -- FIXED BOTH
+- Rani AM 06/14 (12) -- FIXED BOTH
+- Rani AM 06/15 (1) -- FIXED BOTH
+
+D. mer bad rows
+- Kathy AM 06/09 (2) -- FIXED BOTH
+- Eliana AM 06/09 (3) -- FIXED BOTH
+- Kathy AM 06/11 (7) -- FIXED BOTH
+- Chris AM 06/11 (5) -- FIXED BOTH
+- Eliana AM 06/11 (17) -- FIXED BOTH
+- Kathy AM 06/11 (2) -- FIXED BOTH
+- Rani PM 06/15 (12) -- FIXED BOTH
+- Rani AM 06/16 (5) -- FIXED BOTH
+- Chris AM 06/16 (4) -- FIXED BOTH
+- Kathy AM 06/18 (1) -- FIXED BOTH
+- Nelly AM 06/19 (3) -- FIXED BOTH
+- Norma-Jean AM 06/19 (2) -- FIXED BOTH
+
+
+I made a copy of ForgBout_Updated.csv and will edit on there -- renamed it ForgBout_FixedDuration.csv
+
+
+### Next:
+
+Pull in the newly fixed csv's and try running the below code again! Hopefully there will be none. Then take the seconds duration code from above and rerun with the new files.
+
+#### fixed datasets
+
+```{r}
+goodbird <- read.csv(here("Data/ForgBout_FixedDuration.csv"))
+
+goodbird_orig <- read.csv(here("Data/raw/For.Bouts2007_FixedDuration.csv"))
+```
+
+
+```{r}
+## Check that I got all the bad rows ##
+
+goodbird |>
+  filter(duration == "0:00:01")
+
+
+goodbird |>
+  filter(duration == "0:00:02")
+
+  
+goodbird |>
+  filter(duration == "0:00:03")
+
+
+goodbird |>
+  filter(duration == "0:00:04")
+
+  
+goodbird |>
+  filter(duration == "0:00:05")
+
+
+goodbird |>
+  filter(duration == "0:00:00")
+## Missed one argg
+```
+Missed one Phleg row 010103Let (row 120)
+
+
+
+
+### (old) filter to just the normal rows
+Don't need to do this anymore because fixed all the rows
 ```{r}
 # from the full bird dataset
 
-bird_normal_dur <- bird |>
-  filter(!duration %in% c("0:00:01", "0:00:02", "0:00:03", "0:00:04", "0:00:05", "0:00:00"))
+# bird_normal_dur <- bird |>
+#  filter(!duration %in% c("0:00:01", "0:00:02", "0:00:03", "0:00:04", "0:00:05", "0:00:00"))
 ```
 
 Also remove row 307 because it doesn't have any duration
 ```{r}
-bird_normal_dur <- bird_normal_dur[-c(307), ]
+#slice(almostbird[307, ])
+
+#bird_normal_dur <- bird_normal_dur[-c(307), ]
+
+## it's row 308 now -- 010202Izub --- NEED TO CHECK
 ```
 This left me with 1266 observations, as opposed to the 1497 we started with from bird - so had to remove 231 that were wonky
 
@@ -204,61 +355,55 @@ bird_normal_dur |>
 
 
 ## Transform to seconds
+### rows I missed - go back to
+For now, taking out the one row that I missed (row 120 - 010103Let Phleg) and the row with no duration (row308 - 010202Izub Rheg) --- go back and check these FROM 2001, NEED TO GET DATA
+```{r}
+almostbird <- goodbird[-c(308, 120), ]
+```
+
+
 ```{r}
 # googled how to do this
 
 library(lubridate)
 
-duration_period <- ms(bird_normal_dur$duration)
+#duration_period <- ms(bird_normal_dur$duration)
 
-bird_normal_dur$duration_seconds <- period_to_seconds(duration_period)
-# this didn't work, got NA values
+#bird_normal_dur$duration_seconds <- period_to_seconds(duration_period)
+
+#### ^^^ this didn't work, got NA values ^^^
 
 
 #testing with hours,minutes,seconds function
-hms_duration_period <- hms(bird_normal_dur$duration)
+hms_duration_period <- hms(almostbird$duration)
 
-bird_normal_dur$hms_duration_seconds <- period_to_seconds(hms_duration_period)
-# this worked - makes me think there might be some rows that do have milliseconds recorded??
+almostbird$duration_seconds <- period_to_seconds(hms_duration_period)
 
+## now convert to right units by dividing by 60 (this is still in milliseconds)
 
 ```
 
+fix to be in seconds form (divide by 60)
 ```{r}
-# move new column duration_seconds after duration for easier reference
+almostbird$duration_seconds <- almostbird$duration_seconds/60
 
-bird_normal_dur <- bird_normal_dur |>
-  relocate(duration_seconds, .after = duration)
-
-bird_normal_dur <- bird_normal_dur |>
-  relocate(hms_duration_seconds, .after = duration_seconds)
+# alternative code using mutate and older objects
+# bird_normal_dur <- bird_normal_dur |>
+#  mutate(duration_seconds = hms_duration_seconds / 60)
 ```
+
 
 Check if any rows have milliseconds
 ```{r}
 # got this code from google - filtering for any rows that don't end with 00
 
-bird_normal_dur |>
+almostbird |>
     filter(!str_detect(duration, "00$"))
 
-bird_normal_dur |>
+almostbird |>
     filter(!grepl("00$", duration))
 
 # it says there are no rows that end with something other than 00
-```
-
-New plan - divide the hms to seconds column by 60 - this comes up with the correct seconds in ms time
-```{r}
-bird_normal_dur <- bird_normal_dur |>
-  mutate(duration_seconds = hms_duration_seconds / 60)
-
-# this was very roundabout but it worked!!
-```
-
-Remove the column with the hms format
-```{r}
-bird_normal_dur <- bird_normal_dur |>
-  select(-hms_duration_seconds)
 ```
 
 
@@ -266,7 +411,10 @@ bird_normal_dur <- bird_normal_dur |>
 ### Save this file
 
 ```{r}
-write.csv(bird_normal_dur, here("Data", "Bird_edited.csv"))
+write.csv(almostbird, here("Data", "ForgBout_almost.csv"))
+
+## run again when fixed the last 2 rows to get the final, then delete the old versions
+write.csv(almostbird, here("Data", "ForgBout_final.csv"))
 ```
 Note that it doesn't save the hierarchy factor stuff
 
