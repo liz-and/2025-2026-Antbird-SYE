@@ -1,7 +1,7 @@
 ---
 title: "Working with Rates"
 format: html
-date: October 21, 2025
+date: November 13, 2025
 editor: visual
 ---
 
@@ -20,7 +20,7 @@ library(broom)
 ### Load data
 ```{r}
 # the updated dataset with only the rows that has seconds format possible
-bird <- read.csv(here("Data/ForgBout_almost.csv"))
+bird <- read.csv(here("Data/ForgBout_final.csv"))
 ```
 
 ```{r}
@@ -34,22 +34,129 @@ bird <- bird |> mutate(species = factor(species, hierarchy_fct))
 levels(bird$species)
 ```
 
-## My thoughts and questions
-- Can I still use the true/false and make the line plots with an offset?
-- I made a new column from the duration column with just seconds so it's in integer form
-- Including density - would need to do a bunch of filtering I think? Best way to do this? considering that the obsid column has date (year, month, day) and person
+## Exploratory
+Took some code from Exploratory_code.qmd to run with the fixed data
 
-_New questions_
-- Should i use the count variables or the T/F variables for models?
-- 
+### Received intraspecific aggression by species
+```{r}
+# code to get rows of one species where one interaction is occurring(Y/N, not counts)
+# in order of hierarchy
+
+### Received Intraspecific aggression (same spp to same spp)
+
+bird |>
+  filter(species == "Phleg") |>
+  filter(Ind_Rintra == TRUE)
+
+bird |>
+  filter(species == "M. fort") |>
+  filter(Ind_Rintra == TRUE)
+
+bird |>
+  filter(species == "Rheg") |>
+  filter(Ind_Rintra == TRUE)
+
+bird |>
+  filter(species == "D. mer") |>
+  filter(Ind_Rintra == TRUE)
+
+bird |>
+  filter(species == "G. sal") |>
+  filter(Ind_Rintra == TRUE)
+```
+`Phleg` has 36 cases of `Rintra`
+`M. fort` has 2 cases of `Rintra`
+`Rheg` has 27 cases of `Rintra`
+`D. mer` has 48 cases of `Rintra` 
+`G. sal` has 4 cases of `Rintra`
+
+### Initiated Intraspecific Aggression by species
+```{r}
+# Initiated Intraspecific Aggression (same spp to same spp)
+
+bird |>
+  filter(species == "Phleg") |>
+  filter(Ind_Iintra == TRUE)
+
+bird |>
+  filter(species == "M. fort") |>
+  filter(Ind_Iintra == TRUE)
+
+bird |>
+  filter(species == "Rheg") |>
+  filter(Ind_Iintra == TRUE)
+
+bird |>
+  filter(species == "D. mer") |>
+  filter(Ind_Iintra == TRUE)
+
+bird |>
+  filter(species == "G. sal") |>
+  filter(Ind_Iintra == TRUE)
+```
+`Phleg` has 37 cases of `Iintra`
+`M. fort` has 0 cases of `Iintra`
+`Rheg` has 19 cases of `Iintra`
+`D. mer` has 41 cases of `Iintra` 
+`G. sal` has 3 cases of `Iintra`
+
+### Plots
+```{r}
+ggplot(bird, aes(x = species, y = Ind_Rintra, fill = Ind_Rintra)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Species", y = "Rintra Count") +
+  theme_minimal()
+
+ggplot(bird, aes(x = species, y = Ind_Iintra, fill = Ind_Iintra)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Species", y = "Iintra Count") +
+  theme_minimal()
+
+ggplot(bird, aes(x = species, y = Ind_Iinter, fill = Ind_Iinter)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Species", y = "Iinter Count") +
+  theme_minimal()
+
+ggplot(bird, aes(x = species, y = Ind_Rinter, fill = Ind_Rinter)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Species", y = "Rinter Count") +
+  theme_minimal()
+```
+
+### Notes on the birds behaviors
+* D. mer is fully solitary
+* Others are in family groups
+* M. fort has smaller territory size and utilizes praedator swarms more - so less interactions with others intraspecifically unless their territory has swarm right at the edge with another
+
+
+
+## My thoughts and questions
+- I made a new column from the duration column with just seconds so it's in integer form
+- also made a new column with the duration as minutes in decimal form. - this one makes more sense to use*
+- Including density - would need to do a bunch of filtering I think- considering that the obsid column has date (year, month, day) and person
+
+_Approximation of the overall question_
+Are birds who bully more successful at foraging?
+
 
 ### Thinking through approach to models
-- Could do just one species at a time - might make the most sense because they're all different in dominance
-- put in both initiated aggression and received aggression?
+- One species at a time
+- put in both initiated aggression and received aggression??
+
+_New questions_
+- emmeans not running for some species that don't have instances of the predictor - workaround besides building new model?
+- interpretations - am I correct/on right track?
+
+_From meeting with Prof Ramler Nov 13_
+- having a model with all the species makes more sense for comparing them
+- can use emmeans for confints
+- ZIP model w/ neg binom not poisson, and with big model on the non zero inflation side. Species on the zero inflation side
+- see notebook
 
 
 
-## Offset
+## Neg binomial with Offset
+Note - I had in my notes that neg binomial models have issues with offsets
 
 ### Filter one species
 ```{r}
@@ -61,10 +168,26 @@ Phleg_bird <- bird |>
 ```
 
 ```{r}
-Phleg_mod_offset <- glm.nb(Successes ~ Rintra + Rinter + Iintra + Iinter + offset(log(duration_seconds)), data = Phleg_bird) 
+# Phleg_all_nb <- MASS::glm.nb(Successes ~ Rintra + Rinter + Iintra + Iinter + offset(log(duration_seconds/60)), data = Phleg_bird) 
 
-summary(Phleg_mod_offset)
+# summary(Phleg_all_nb)
+
+Phleg_all_nb_ind_S <- MASS::glm.nb(Successes ~ Ind_Rintra + Ind_Rinter + Ind_Iintra + Ind_Iinter + offset(log(duration_minutes)), data = Phleg_bird) 
+
+summary(Phleg_all_nb_ind_S)
+
+
+Phleg_all_nb_ind_A <- MASS::glm.nb(attempts ~ Ind_Rintra + Ind_Rinter + Ind_Iintra + Ind_Iinter + offset(log(duration_minutes)), data = Phleg_bird) 
 ```
+#### emmeans - Relative risk scale
+```{r}
+emmInd_Phleg_S <- emmeans(Phleg_all_nb_ind_S ~ Ind_Rintra:Ind_Iintra)
+## need to play around with this... getting error message (use next line of code once this works)
+
+## plot( pairs(emmInd_Phleg_S, by = "Ind_Iintra", type = "response") ) + geom_vline(xintercept = 1)
+```
+
+
 
 
 ### Rintra from before
@@ -86,9 +209,323 @@ summary(Phleg_mod_offset)
 # This worked, but I'm not quite sure what it means
 ```
 
+## Big model
+
+### Successes
+```{r}
+big_nb_mod_S <- MASS::glm.nb(Successes ~ species + species:Ind_Rintra + species:Ind_Iintra + species:Ind_Rinter + species:Ind_Iinter + offset(log(duration_minutes)), data = bird)
+
+summary(big_nb_mod_S)
+```
+
+```{r}
+# big model edits
+
+big_nb_mod_2_S <- MASS::glm.nb(Successes ~ species + Ind_Rintra + Ind_Rinter + Ind_Iintra + Ind_Iinter + species:Ind_Rintra + species:Ind_Iintra + species:Ind_Rinter + species:Ind_Iinter + offset(log(duration_minutes)), data = bird)
+
+summary(big_nb_mod_2_S)
+```
+
+
+```{r}
+library(broom)
+
+big_nb_mod_S |>
+  tidy() 
+
+```
 
 
 
+
+#### Interpretations
+Intercept --> represents Phleg - the log likelihood of success per minute for Phlegs holding all else constant. On the relative risk scale (exp(-0.647303)) = 0.5234556
+
+Then the rest of the coefficients are the difference from Phleg on the log scale
+
+When M.fort receives Intraspecific aggression (Rintra) the likelihood of success per minute is -0.647303 + 0.760648 = 0.113345. That's on the log scale so exponentiated the likelihood of success per minute is 1.120018, holding all other variables constant. 
+ 
+
+#### emmeans
+The emmean is the log mean rate and get 95% CI's?
+
+```{r}
+## Iintra ##
+emmInd_Iintra <- emmeans(big_nb_mod_S, ~ species:Ind_Iintra)
+# note warning about nested structure
+
+emmInd_Iintra
+
+## plot ##
+plot( pairs(emmInd_Iintra, by = "species") ) + geom_vline(xintercept = 0)
+
+# got error message I think because there's no cases of True for M.fort and it doesn't know what to do for plotting?
+```
+
+
+
+Try another
+Ind_Rinter
+```{r}
+## Rinter ## - because has values for each species
+
+emmInd_Rinter <- emmeans(big_nb_mod_S, ~ species:Ind_Rinter)
+
+emmInd_Rinter
+
+plot( pairs(emmInd_Rinter, by = "species") ) + geom_vline(xintercept = 0)
+```
+From the plot, no species is significant
+
+
+*Relative risk scale*
+```{r}
+## Successes model - Ind_Rinter by species ##
+
+plot( pairs(emmInd_Rinter, by = "species", type = "response") ) + geom_vline(xintercept = 1)
+```
+Still nothing significant, but M.fort almost is
+
+
+
+##### General interpretation method (Took from google):
+RR = 1: The risk of the event is equal in both the exposed and unexposed groups. There is no association between the exposure and the outcome.
+  *So, birds are equally likely to have success if there is or isn't interspec agg.* 
+
+RR > 1: The risk of the event is higher in the exposed group compared to the unexposed group. For example, an RR of 2.5 means the exposed group has 2.5 times the risk.
+  *So, birds more likely to have success if they recieve interspec agg. Rheg has about 1.25 times the chance of success occurring when receives interspec agg.*
+  
+RR < 1: The risk of the event is lower in the exposed group compared to the unexposed group. This suggests the exposure may be protective. For example, an RR of 0.75 indicates the exposed group has a 25% lower risk (\(1-0.75=0.25\)).
+  *So, birds less likely to have success if they receive interspec agg.*
+  
+We cannot conclude that there is a significant difference between any groups in the "risk" of the event (success) occurring. (because the confidence intervals contains 1)
+
+### Attempts
+```{r}
+big_nb_mod_A <- MASS::glm.nb(attempts ~ species + species:Ind_Rintra + species:Ind_Iintra + species:Ind_Rinter + species:Ind_Iinter + offset(log(duration_minutes)), data = bird)
+
+summary(big_nb_mod_A)
+```
+
+
+#### emmeans
+
+```{r}
+## Rinter ## - because has values for each species
+
+emmInd_Rinter_A <- emmeans(big_nb_mod_A, ~ species:Ind_Rinter)
+
+emmInd_Rinter_A |>
+  as.data.frame() |>
+  filter(species == "Phleg")
+
+plot( pairs(emmInd_Rinter_A, by = "species") ) + geom_vline(xintercept = 0)
+
+## relative risk scale
+plot( pairs(emmInd_Rinter_A, by = "species", type = "response") ) + geom_vline(xintercept = 1)
+```
+#### General interpretation method (Took from google):
+for relative risk scale
+
+RR = 1: The risk of the event is equal in both the exposed and unexposed groups. There is no association between the exposure and the outcome.
+  *So, birds are equally likely to make an attempt if there is or isn't interspec agg.* 
+
+RR > 1: The risk of the event is higher in the exposed group compared to the unexposed group. For example, an RR of 2.5 means the exposed group has 2.5 times the risk.
+  *So, birds more likely to make an attempt if they recieve interspec agg. Rheg has 1.1 times the chance attempt occuring when receives interspec agg.*
+  
+RR < 1: The risk of the event is lower in the exposed group compared to the unexposed group. This suggests the exposure may be protective. For example, an RR of 0.75 indicates the exposed group has a 25% lower risk (\(1-0.75=0.25\)).
+  *So, birds less likely to make an attempt if they receive interspec agg. Phleg is about (|1-0.7=0.3|) 30% less likely to make an attempt if receive interspec agg.*
+  
+We cannot conclude that there is a signifant difference between any groups in the "risk" of the event (attempt) occuring. (because the confidence interval contains 1)
+
+
+
+## Less spp big model
+I think because there's not much data for Intraspecific aggression being true for M fort or G.sal, the other big model wasn't able to display certain output for those variables with the species included. I'm going to try making a new dataframe without those species and refitting the model to see if that helps. 
+
+```{r}
+bird_three_spp <- bird |>
+  filter(species == c("Phleg", "Rheg", "D. mer"))
+
+# cuts it down to 385 rows
+```
+
+Run the models again with the smaller dataset
+### Successes big model
+```{r}
+threeSpp_big_nb_mod_S <- MASS::glm.nb(Successes ~ species + species:Ind_Rintra + species:Ind_Iintra + species:Ind_Rinter + species:Ind_Iinter + offset(log(duration_minutes)), data = bird_three_spp)
+
+summary(threeSpp_big_nb_mod_S)
+# still don't have coefs for two interactions, like last time but with different species...
+```
+
+#### Ind_Iintra emmeans
+```{r}
+threeSpp_emmInd_Iintra_S <- emmeans(threeSpp_big_nb_mod_S, ~ species:Ind_Iintra)
+# note warning about nested structure
+
+threeSpp_emmInd_Iintra_S
+
+## plot on relative risk scale ##
+plot( pairs(threeSpp_emmInd_Iintra_S, by = "species", type = "response") ) + geom_vline(xintercept = 1)
+
+# now this one works with the smaller dataset
+```
+##### Interpretation
+RR = 1: The risk of the event is equal in both the exposed and unexposed groups. There is no association between the exposure and the outcome.
+  *So, birds are equally likely to have success if they do or don't initiate intraspec agg.* 
+
+RR > 1: The risk of the event is higher in the exposed group compared to the unexposed group. For example, an RR of 2.5 means the exposed group has 2.5 times the risk.
+  *So, birds more likely to make have success if they initiate intraspec agg. Rheg has about 2 times the chance of successe occuring when initiate interspec agg.*
+  
+RR < 1: The risk of the event is lower in the exposed group compared to the unexposed group. This suggests the exposure may be protective. For example, an RR of 0.75 indicates the exposed group has a 25% lower risk (\(1-0.75=0.25\)).
+  *So, birds less likely to have success if they initiate intraspec agg. Not the case for any of these species*
+
+
+
+#### Ind_Rintra emmeans
+```{r}
+threeSpp_emmInd_Rintra_S <- emmeans(threeSpp_big_nb_mod_S, ~ species:Ind_Rintra)
+# note warning about nested structure
+
+threeSpp_emmInd_Rintra_S
+
+## plot on relative risk scale ##
+plot( pairs(threeSpp_emmInd_Rintra_S, by = "species", type = "response") ) + geom_vline(xintercept = 1)
+# this is giving me error message, same as before with full dataset
+```
+
+### Attempts model
+```{r}
+threeSpp_big_nb_mod_A <- MASS::glm.nb(attempts ~ species + species:Ind_Rintra + species:Ind_Iintra + species:Ind_Rinter + species:Ind_Iinter + offset(log(duration_minutes)), data = bird_three_spp)
+
+summary(threeSpp_big_nb_mod_A)
+```
+
+#### Ind_Iintra emmeans for attempts
+```{r}
+threeSpp_emmInd_Iintra_A <- emmeans(threeSpp_big_nb_mod_A, ~ species:Ind_Iintra)
+# note warning about nested structure
+
+threeSpp_emmInd_Iintra_A
+
+## plot on relative risk scale ##
+plot( pairs(threeSpp_emmInd_Iintra_A, by = "species", type = "response") ) + geom_vline(xintercept = 1)
+```
+##### Interpretation
+RR = 1: The risk of the event is equal in both the exposed and unexposed groups. There is no association between the exposure and the outcome.
+  *So, birds are equally likely to make an attempt if they do or don't initiate intraspec agg.* 
+
+RR > 1: The risk of the event is higher in the exposed group compared to the unexposed group. For example, an RR of 2.5 means the exposed group has 2.5 times the risk.
+  *So, birds more likely to make an attempt if they initiate intraspec agg. Rheg has about 1.6 times the chance of make an attempt when initiate interspec agg.*
+  
+RR < 1: The risk of the event is lower in the exposed group compared to the unexposed group. This suggests the exposure may be protective. For example, an RR of 0.75 indicates the exposed group has a 25% lower risk (\(1-0.75=0.25\)).
+  *So, birds less likely to make an attempt if they initiate intraspec agg. Phleg are about 70% less likely to make an attempt if they initiate intraspec agg.*
+
+
+
+#### Ind_Rintra emmeans for attempts
+```{r}
+threeSpp_emmInd_Rintra_A <- emmeans(threeSpp_big_nb_mod_A, ~ species:Ind_Rintra)
+# note warning about nested structure
+
+threeSpp_emmInd_Rintra_A
+
+## plot on relative risk scale ##
+plot( pairs(threeSpp_emmInd_Rintra_A, by = "species", type = "response") ) + geom_vline(xintercept = 1)
+# same error message - seems like Rintra has something up with it...
+```
+
+## Graph to make
+For each species:
+y-axis is Success
+x-axis is each of the aggressions (Rintra, Rinter, Iintra, Iinter) and no agression as bars showing differences in success for the species when it does each of the aggressions or doesn't do any aggression
+
+
+```{r}
+No_int_emmeans2 <- emmeans(big_nb_mod_2_S, ~ Ind_Rintra + Ind_Rinter + Ind_Iinter + Ind_Iintra | species) |>
+  as.data.frame() |>
+  filter((Ind_Rintra + Ind_Rinter + Ind_Iinter + Ind_Iintra) == 0) |>
+  mutate(Type_of_Interaction = "none")
+
+Ind_Rintra_emmeans2 <- emmeans(big_nb_mod_2_S, ~ Ind_Rintra | species) |>
+  as.data.frame() |>
+  filter(Ind_Rintra == TRUE) |>
+  mutate(Type_of_Interaction = "Rintra")
+
+Ind_Rinter_emmeans2 <- emmeans(big_nb_mod_2_S, ~ Ind_Rinter | species) |>
+  as.data.frame() |>
+  filter(Ind_Rinter == TRUE) |>
+  mutate(Type_of_Interaction = "Rinter") 
+
+Ind_Iintra_emmeans2 <- emmeans(big_nb_mod_2_S, ~ Ind_Iintra | species) |>
+  as.data.frame() |>
+  filter(Ind_Iintra == TRUE) |>
+  mutate(Type_of_Interaction = "Iintra")
+
+Ind_Iinter_emmeans2 <- emmeans(big_nb_mod_2_S, ~ Ind_Iinter | species) |>
+  as.data.frame() |>
+  filter(Ind_Iinter == TRUE) |>
+  mutate(Type_of_Interaction = "Iinter")
+
+exp(Ind_Rinter_emmeans2$emmean)
+exp(Ind_Rintra_emmeans2$emmean)
+exp(Ind_Iinter_emmeans2$emmean)
+exp(Ind_Iintra_emmeans2$emmean)
+exp(No_int_emmeans2$emmean)
+
+binded_emmeans2 <- bind_rows(No_int_emmeans2, Ind_Rintra_emmeans2, Ind_Rinter_emmeans2, Ind_Iintra_emmeans2, Ind_Iinter_emmeans2)
+
+# log scale so need to exponentiate
+ggplot(data = binded_emmeans2, aes(x=Type_of_Interaction, y = emmean))+
+  geom_col()+
+  facet_wrap(~species)
+```
+emmean is the estimated marginal mean (aka least squares mean) - 
+
+```{r}
+No_int_emmeans <- emmeans(big_nb_mod_S, ~ Ind_Rintra + Ind_Rinter + Ind_Iinter + Ind_Iintra | species) |>
+  as.data.frame() |>
+  filter((Ind_Rintra + Ind_Rinter + Ind_Iinter + Ind_Iintra) == 0) |>
+  mutate(Type_of_Interaction = "none")
+
+Ind_Rintra_emmeans <- emmeans(big_nb_mod_S, ~ Ind_Rintra | species) |>
+  as.data.frame() |>
+  filter(Ind_Rintra == TRUE) |>
+  mutate(Type_of_Interaction = "Rintra")
+
+Ind_Rinter_emmeans <- emmeans(big_nb_mod_S, ~ Ind_Rinter | species) |>
+  as.data.frame() |>
+  filter(Ind_Rinter == TRUE) |>
+  mutate(Type_of_Interaction = "Rinter") 
+
+Ind_Iintra_emmeans <- emmeans(big_nb_mod_S, ~ Ind_Iintra | species) |>
+  as.data.frame() |>
+  filter(Ind_Iintra == TRUE) |>
+  mutate(Type_of_Interaction = "Iintra")
+
+Ind_Iinter_emmeans <- emmeans(big_nb_mod_S, ~ Ind_Iinter | species) |>
+  as.data.frame() |>
+  filter(Ind_Iinter == TRUE) |>
+  mutate(Type_of_Interaction = "Iinter")
+
+# log scale so need to exponentiate
+exp(Ind_Rinter_emmeans$emmean)
+exp(Ind_Rintra_emmeans$emmean)
+exp(Ind_Iinter_emmeans$emmean)
+exp(Ind_Iintra_emmeans$emmean)
+exp(No_int_emmeans$emmean)
+
+binded_emmeans <- bind_rows(No_int_emmeans, Ind_Rintra_emmeans, Ind_Rinter_emmeans, Ind_Iintra_emmeans, Ind_Iinter_emmeans)
+
+
+ggplot(data = binded_emmeans, aes(x=Type_of_Interaction, y = emmean))+
+  geom_col()+
+  facet_wrap(~species)
+```
+Why are they different?
+What is the y-axis actually saying? 
+Should I have used the indicator variable success as the response? but then would need to be logistic...
 
 
 ## Zero Inflated Poisson
@@ -106,46 +543,55 @@ ggplot(aes(x = Successes), data = Phleg_bird)+
 # these do seem like candidates for zero-inflated poisson models
 ```
 Thoughts
-- is there 2 clear groups? each bird has equal chance of success, but might be stopped by bullying - which is what we're trying to figure out. but they could also not have any bullying and be unsuccessful
+- the groups: each bird has equal chance of success, but might be stopped by bullying - which is what we're trying to figure out. but they could also not have any bullying and be unsuccessful or not make attempts
 
 
 ### Part 1 - the poisson regression part
-model the number of successes amongst birds who are successful
+model the number of successes among birds who are successful
+or number of attempts among birds who make an attempt
 
-include duration_seconds here
-attempts?
-Rintra - value or yes/no? - maybe include, maybe not
+response is the mean number of successes or the mean number of attempts
 
+maybe include duration_seconds here too
+- species
 
 
 ### Part 2 - the logistic regression part/zero inflation part
-model the probability that a bird is not successful
+model the probability that a bird is not successful or doesn't make an attempt
 
-include duration_seconds here
-include Rintra or Ind_Rintra here
+maybe include duration_seconds here
+- include the big model here
 
 ### code
-```{r}
-ZIPmod_Phleg <- zeroinfl(Successes ~ attempts + duration_seconds|Rintra + duration_seconds, data = Phleg_bird, dist = "poisson")
-
-# now thinking that attempts and successes is way too correlated to use that as a predictor - do something else?
-
-# worked
-summary(ZIPmod_Phleg)
-
-
-#### OLD #####
-# got error message - system is computationally singular.... 
-# googled and says could be issues with multicolinearity, overfitting, zero variance 
-###############
-```
 
 
 ```{r}
-#correlation matrix
-cor(Phleg_bird)
-# saying x must be numeric - why?
+## new try with full model ##
+
+ZIPmod_full <- zeroinfl(Successes ~ species + offset(log(duration_minutes)) | species + species:Ind_Rintra + species:Ind_Iintra + species:Ind_Rinter + species:Ind_Iinter + offset(log(duration_minutes)), data = bird, dist = "negbin")
+
+# got weird error message don't know what it means
+
+
+ZIPmod_reduced <- zeroinfl(Successes ~ species + Ind_Rintra + Ind_Iintra + Ind_Rinter + Ind_Iinter + offset(log(duration_minutes)) | species + duration_minutes, data = bird, dist = "negbin")
+# the model works without having the interaction terms in the first part
+summary(ZIPmod_reduced)
 ```
+
+```{r}
+ZIPmod_reduced <- zeroinfl(Successes ~ species + Ind_Rintra + Ind_Iintra + Ind_Rinter + Ind_Iinter + species:Ind_Rintra + species:Ind_Iintra + species:Ind_Rinter + species:Ind_Iinter + offset(log(duration_minutes)) | species + duration_minutes, data = bird, dist = "negbin")
+```
+
+
+
+```{r}
+summary(ZIPmod_full)
+```
+
+
+
+
+
 
 
 

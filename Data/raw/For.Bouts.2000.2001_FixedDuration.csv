@@ -1,0 +1,362 @@
+﻿obsid,species,colors,time,duration,attempts,Rinter,Rintra,Iinter,Iintra,Notes,Successes,Observer,Sex,birdid
+001023Tina,Phleg,s-by,,04:00:00,4,0,0,0,0,,3,KJS,,Ps-by
+001026Izua,M. fort,unb,,03:00:00,0,0,0,0,0,,0,SKW,Male,Munb
+001026Izua,M. fort,unb,,03:00:00,1,0,0,0,0,,1,SKW,Male,Munb
+001026Smaa,Phleg,unb,,04:00:00,3,0,0,0,0,,0,DRH,Unknown,Punb
+001102Izua,G. sal,s-oy,,03:04:00,1,0,0,0,0,,1,DRH,Female,Gs-oy
+001102Tita,D. mer,unb,,04:00:00,2,0,0,0,0,,1,DRH,Unknown,Dunb
+001108Tita,Rheg,r-sr,,04:00:00,3,0,0,0,0,,1,SKW,Male,Rr-sr
+001110Cada,D. mer,r-sg,10:30:00,04:00:00,1,0,0,0,1,,0,SKW,Unknown,Dr-sg
+001127Edwa,Rheg,gp-s,10:45:00,04:00:00,2,0,1,0,0,disp. by mate,1,DRH,Female,Rgp-s
+001127Edwa,Rheg,by-s,1105:00:00,01:20:00,1,0,0,0,0,,1,DRH,Male,Rby-s
+001125Lab,Phleg,s-oo,1025:00:00,03:00:00,2,0,0,0,0,,0,ES,Unknown,Ps-oo
+001125Lab,Phleg,s-oo,1120:00:00,04:00:00,4,0,0,0,0,,1,ES,Unknown,Ps-oo
+001125Lab,Phleg,oo-s,1030:00:00,03:00:00,3,0,0,0,0,,0,ES,Unknown,Poo-s
+001125Lab,Phleg,oo-s,1040:00:00,03:00:00,3,0,0,0,0,,1,ES,Unknown,Poo-s
+001128Edwa,Rheg,by-s,830:00:00,01:00:00,2,0,0,0,0,,0,SKW,Male,Rby-s
+001128Lab,G. sal,go-s,1114:00:00,04:00:00,2,0,0,0,0,,0,SKW,Male,Ggo-s
+001128Lab,M. fort,ff-s,1120:00:00,01:30:00,0,0,0,0,0,,0,SKW,Female,Mff-s
+001128Lab,M. fort,unb,1125:00:00,02:00:00,3,0,1,0,0,frm mate,3,SKW,Male,Munb
+001128Lab,M. fort,ff-s,1134:00:00,04:00:00,0,0,0,0,0,,0,SKW,Female,Mff-s
+001128Edw,Phleg,unb,806:00:00,01:50:00,2,0,0,0,0,,1,DRH,Unknown,Punb
+001128Edw,G. sal,s-oy,900:00:00,01:55:00,3,2,0,0,0,Rheg,1,DRH,Female,Gs-oy
+001128Edw,Rheg,gp-s,905:00:00,04:00:00,6,0,0,0,0,,5,DRH,Female,Rgp-s
+001129Lab,Rheg,gp-s,924:00:00,03:20:00,3,0,0,0,0,,1,ES,Female,Rgp-s
+001129Lab,G. sal,bw-s,1015:00:00,03:00:00,1,0,0,0,0,,0,ES,Female,Gbw-s
+001129Lab,G. sal,bw-s,1054:00:00,04:00:00,2,0,0,0,0,,1,ES,Female,Gbw-s
+001201Izu,G. sal,s-oy,825:00:00,03:30:00,7,0,0,0,0,,5,SKW,Female,Gs-oy
+001201Izu,G. sal,yy-s,837:00:00,04:00:00,3,0,0,0,0,,1,SH,Male,Gyy-s
+001201Izu,G. sal,s-oy,912:00:00,01:20:00,2,0,0,0,0,,1,SKW,Female,Gs-oy
+001201Izu,Phleg,unb,924:00:00,03:30:00,2,0,1,0,0,,2,SKW,Unknown,Punb
+001201Tin,Phleg,oo-s,1052:00:00,04:00:00,4,0,0,0,0,,1,ES,Unknown,Poo-s
+001201Tin,Phleg,s-oo,1110:00:00,02:30:00,2,0,0,0,0,,0,ES,Unknown,Ps-oo
+001201Lab,Rheg,gp-s,620:00:00,02:05:00,2,0,0,0,0,,2,ES,Female,Rgp-s
+001201Lab,M. fort,g-ys,825:00:00,02:00:00,2,0,0,0,0,,1,ES,Female,Mg-ys
+001204Edw,Rheg,gp-s,720:00:00,02:00:00,2,0,0,0,0,,1,ES,Female,Rgp-s
+001204Edw,Rheg,gp-s,750:00:00,01:30:00,1,0,0,0,0,,1,ES,Female,Rgp-s
+001204Edw,G. sal,yy-s,947:00:00,01:44:00,2,0,0,0,0,,1,ES,Male,Gyy-s
+001204Edw,G. sal,yy-s,1054:00:00,01:22:00,2,0,0,0,0,,2,ES,Male,Gyy-s
+001204Edw,Phleg,rr-s,850:00:00,03:40:00,4,0,0,0,0,,2,ES,Male,Prr-s
+001204Edw,Rheg,gp-s,900:00:00,03:00:00,3,0,0,0,0,,2,ES,Female,Rgp-s
+001204Edw,Phleg,unb,1036:00:00,02:56:00,2,0,0,0,0,,1,ES,Unknown,Punb
+001202Tin,Phleg,oo-s,700:00:00,03:30:00,0,0,0,0,0,,0,SKW,Unknown,Poo-s
+001202Gna,G. sal,unb,953:00:00,01:45:00,2,0,0,0,0,,0,SKW,Male,Gunb
+001208Edw,Rheg,gp-s,905:00:00,01:00:00,2,0,0,0,0,,2,ES,Female,Rgp-s
+001208Edw,Rheg,gp-s,933:00:00,03:10:00,3,0,0,0,0,,1,ES,Female,Rgp-s
+001209Nod,G. sal,s-by,826:00:00,04:00:00,0,0,0,0,0,,0,SKW,Male,Gs-by
+001209Nod,Phleg,unb,900:00:00,02:40:00,1,0,0,0,0,,1,SKW,Unknown,Punb
+001209Nod,G. sal,rp-s,930:00:00,03:00:00,0,0,0,0,0,,0,SKW,Male,Grp-s
+001209Gna,D. mer,wp-s,1045:00:00,03:10:00,0,0,0,0,0,,0,SKW,Female,Dwp-s
+001215Lab,Rheg,gp-s,1042:00:00,04:00:00,3,0,0,0,0,,3,SKW,Female,Rgp-s
+001216Tin,D. mer,rg-s,956:00:00,01:20:00,2,0,0,0,0,only bird,1,SKW,Female,Drg-s
+001219Gna,G. sal,unb,903:00:00,04:00:00,0,3,0,0,0,M.fort,0,SKW,Male,Gunb
+001223Gna,M. fort,unb,820:00:00,04:00:00,1,0,0,0,0,,0,SKW,Male,Munb
+001213Edw,Rheg,gp-s,855:00:00,03:00:00,3,0,0,0,0,,2,DRH,Female,Rgp-s
+001215Stu,M. fort,unb,750:00:00,01:30:00,2,0,0,0,0,,2,DRH,Male,Munb
+001216Lab,Rheg,gp-s,910:00:00,04:00:00,5,0,0,0,0,,2,DRH,Female,Rgp-s
+001216Lab,Phleg,y-sr,1010:00:00,01:00:00,1,0,0,0,0,,1,DRH,Unknown,Py-sr
+001216Lab,Phleg,y-sr,1030:00:00,02:00:00,2,0,0,0,0,,2,DRH,Unknown,Py-sr
+001219Izu,Rheg,by-s,1055:00:00,04:00:00,3,0,0,0,0,,2,DRH,Male,Rby-s
+001222Izu,G. sal,p-sp,945:00:00,01:30:00,1,0,0,0,0,juv,0,DRH,Female,Gp-sp
+001222Izu,Phleg,unb,1007:00:00,03:20:00,1,0,0,0,0,,1,DRH,Unknown,Punb
+001226Tit,G. sal,s-pp,700:00:00,01:40:00,3,0,0,0,0,,3,DRH,Female,Gs-pp
+001226Tit,Phleg,unb,705:00:00,04:00:00,4,0,0,0,0,,2,DRH,Unknown,Punb
+001226Izu,G. sal,s-oy,1037:00:00,02:35:00,3,0,0,0,0,,3,DRH,Female,Gs-oy
+001226Izu,D. mer,rg-s,1100:00:00,04:00:00,0,0,0,0,0,,0,DRH,Female,Drg-s
+001228Izu,G. sal,p-sp,720:00:00,02:00:00,0,0,0,0,0,juv,0,CETP,Female,Gp-sp
+001228Izu,G. sal,p-sp,755:00:00,02:00:00,3,0,0,0,0,,0,CETP,Female,Gp-sp
+001228Izu,G. sal,yy-s,759:00:00,05:00:00,3,0,0,0,0,,2,CETP,Male,Gyy-s
+001228Tit,D. mer,s-wb,726:00:00,04:00:00,2,0,0,0,0,,2,SKW,Female,Ds-wb
+001228Tit,Phleg,y-sr,806:00:00,02:15:00,3,0,0,0,0,,3,SKW,Unknown,Py-sr
+001228Tit,D. mer,s-wb,820:00:00,04:00:00,5,0,0,0,0,,3,SKW,Female,Ds-wb
+001228Edw,Phleg,ob-s,01:30:00,01:30:00,1,0,0,0,0,,1,SKW,Female,Pob-s
+010102Let,G. sal,bw-s,1016:00:00,02:45:00,0,0,0,0,0,stretching,0,SKW,Female,Gbw-s
+010103Let,Phleg,s-pg,722:00:00,02:00:00,0,0,0,0,0,,0,SKW,Male,Ps-pg
+010103Let,D. mer,rg-s,734:00:00,04:00:00,1,0,0,0,0,,1,SKW,Female,Drg-s
+010103Let,Phleg,s-pg,01:00:00,4:00:00,1,0,0,0,0,,0,SKW,Male,Ps-pg
+010103Izu,G. sal,yy-s,1030:00:00,03:00:00,2,0,0,0,0,,0,SKW,Male,Gyy-s
+010103Izu,G. sal,p-sp,1042:00:00,04:00:00,2,1,0,0,0,"Rheg, p-sp=juv",1,SKW,Female,Gp-sp
+001230Edw,Phleg,s-bw,916:00:00,08:20:00,6,0,0,0,0,,3,CETP,Unknown,Ps-bw
+001230Edw,Phleg,unb,933:00:00,01:20:00,1,0,0,0,0,,0,CETP,Unknown,Punb
+001230Tit,Rheg,unb,1034:00:00,01:15:00,2,0,0,0,0,,0,CETP,Male,Runb
+001230Tit,Rheg,unb,1102:00:00,01:47:00,0,0,0,0,0,,0,CETP,Male,Runb
+010102Izu,M. fort,g-sy,730:00:00,03:00:00,6,0,0,0,0,,2,CETP,Female,Mg-sy
+010102Izu,Rheg,r-sy,740:00:00,02:00:00,3,0,0,0,0,"juv, begged frm gp-s, received nada",0,CETP,Unknown,Rr-sy
+010103Let,Phleg,s-pg,916:00:00,01:10:00,0,0,0,0,0,,0,CETP,Male,Ps-pg
+010103Edw,Phleg,s-bw,1113:00:00,02:00:00,0,0,0,0,0,,0,CETP,Unknown,Ps-bw
+010103Edw,Phleg,s-bw,1118:00:00,01:30:00,0,0,0,0,0,,0,CETP,Unknown,Ps-bw
+010103Edw,Phleg,s-bw,1121:00:00,01:45:00,0,0,0,0,0,,0,CETP,Unknown,Ps-bw
+010103Edw,Phleg,s-bw,1130:00:00,06:30:00,3,0,0,0,0,,0,CETP,Unknown,Ps-bw
+010103Let,G. sal,go-s,941:00:00,04:00:00,0,0,0,0,0,,0,CETP,Male,Ggo-s
+010102Izu,G. sal,p-sp,1019:00:00,01:15:00,0,0,0,0,0,juv,0,CETP,Female,Gp-sp
+010104Lab,Rheg,r-sy,740:00:00,05:00:00,0,0,0,0,0,juv,0,CETP,Unknown,Rr-sy
+010104Lab,Rheg,r-sy,745:00:00,01:10:00,0,0,0,0,0,juv,0,CETP,Unknown,Rr-sy
+010104Lab,Rheg,gp-s,755:00:00,04:00:00,1,0,0,0,0,fed item to r-sy,1,CETP,Female,Rgp-s
+010104Lab,Rheg,gp-s,802:00:00,06:30:00,0,0,0,0,0,preening,0,CETP,Female,Rgp-s
+010104Izu,M. fort,s-yr,1056:00:00,01:00:00,0,0,0,0,0,,0,CETP,Male,Ms-yr
+010106Edw,D. mer,r-sg,1024:00:00,01:00:00,0,0,0,0,0,,0,CETP,,Dr-sg
+010106Edw,Rheg,unb,1055:00:00,01:45:00,2,0,0,0,0,,2,CETP,Unknown,Runb
+010106Edw,Phleg,s-bw,1042:00:00,02:15:00,0,0,0,0,0,,0,CETP,Unknown,Ps-bw
+010106Edw,Phleg,s-bw,1047:00:00,02:15:00,2,0,0,0,0,CF,1,CETP,Unknown,Ps-bw
+010108Gna,D. mer,r-sg,936:00:00,01:30:00,0,0,0,0,0,,0,CETP,Unknown,Dr-sg
+010109Lab,D. mer,wp-s,1024:00:00,01:15:00,0,0,0,0,0,,0,CETP,Female,Dwp-s
+001228Edw,Phleg,y-sr,951:00:00,01:00:00,1,0,0,0,0,,1,DRH,Unknown,Py-sr
+001228Edw,D. mer,s-wb,1007:00:00,03:00:00,1,0,0,0,0,,1,DRH,Unknown,Ds-wb
+001228Edw,Phleg,ob-s,1048:00:00,02:22:00,2,0,0,0,0,,2,DRH,Female,Pob-s
+001230Edw,Phleg,s-bw,923:00:00,01:30:00,2,0,0,0,1,CF,2,DRH,Unknown,Ps-bw
+001230Edw,Phleg,unb,931:00:00,01:00:00,1,0,0,0,0,,1,DRH,Unknown,Punb
+010103Edw,Phleg,s-bw,1115:00:00,02:50:00,2,0,0,0,0,CF,1,DRH,Unknown,Ps-bw
+010103Edw,Phleg,s-gw,1130:00:00,02:00:00,0,0,0,0,0,,0,DRH,Unknown,Ps-gw
+010103Edw,M. fort,unb,1135:00:00,02:00:00,0,0,0,0,0,,0,DRH,Female,Munb
+010103Edw,Phleg,s-bw,1140:00:00,02:56:00,0,0,0,0,0,,0,DRH,Unknown,Ps-bw
+010103Edw,Phleg,s-gw,1148:00:00,03:22:00,4,0,0,0,1,"displ.mate, CF",4,DRH,Unknown,Ps-gw
+010104Tit,D. mer,s-wb,848:00:00,03:00:00,3,0,0,0,0,only bird,2,DRH,Female,Ds-wb
+010104Edw,Phleg,rr-s,950:00:00,01:00:00,1,0,0,0,0,,1,DRH,Unknown,Prr-s
+010104Edw,Phleg,rr-s,1005:00:00,02:00:00,2,0,0,0,0,,1,DRH,Unknown,Prr-s
+010104Edw,Phleg,rr-s,1020:00:00,02:30:00,0,0,0,0,0,,0,DRH,Unknown,Prr-s
+010104Edw,Phleg,rr-s,1045:00:00,02:20:00,0,0,0,0,0,,0,DRH,Unknown,Prr-s
+010108Lab,Rheg,gp-s,1125:00:00,02:00:00,0,0,0,0,0,,0,DRH,Female,Rgp-s
+010108Lab,Rheg,by-s,1140:00:00,01:40:00,3,0,0,0,0,,2,DRH,Male,Rby-s
+010108Lab,Rheg,y-sy,1150:00:00,01:00:00,3,0,0,0,0,juv,1,DRH,Unknown,Ry-sy
+010109Edw,Phleg,s-bw,800:00:00,03:20:00,3,0,0,0,0,,2,DRH,Unknown,Ps-bw
+010109Edw,Phleg,s-gw,816:00:00,03:30:00,5,0,0,0,0,,4,DRH,Unknown,Ps-gw
+010109Edw,D. mer,unb,819:00:00,02:00:00,0,0,0,0,0,,0,DRH,Unknown,Dunb
+010109Edw,Phleg,s-bw,824:00:00,04:00:00,1,0,0,0,0,,1,DRH,Unknown,Ps-bw
+010109Edw,D. mer,r-sg,830:00:00,01:00:00,0,0,1,0,1,interact. w/  unb,0,DRH,Unknown,Dr-sg
+010109Edw,D. mer,unb,840:00:00,01:30:00,5,0,0,0,0,,4,DRH,Unknown,Dunb
+010109Edw,D. mer,r-sg,910:00:00,04:00:00,2,0,0,0,0,,1,DRH,Unknown,Dr-sg
+010110Lab,G. sal,bw-s,748:00:00,04:00:00,0,0,0,0,0,preening,0,DRH,Female,Gbw-s
+010110Lab,M. fort,g-sy,849:00:00,03:00:00,1,0,0,0,0,only bird,0,DRH,Female,Mg-sy
+010111Edw,G. sal,unb,917:00:00,01:15:00,1,0,0,0,0,,0,CETP,Female,Gunb
+010111Edw,D. mer,r-sg,920:00:00,02:30:00,1,1,,0,0,Phleg s-gw,0,CETP,Unknown,Dr-sg
+010111Edw,Phleg,s-gw,940:00:00,04:40:00,3,0,0,0,0,,1,CETP,Unknown,Ps-gw
+010104Nod,D. mer,unb,910:00:00,04:00:00,0,0,0,0,0,,0,SKW,Unknown,Dunb
+010104Nod,D. mer,WP-S,913:00:00,01:30:00,0,0,0,0,0,,0,SKW,Female,DWP-S
+010104Gna,G. sal,s-pp,1121:00:00,01:20:00,1,0,0,0,0,,1,SKW,Female,Gs-pp
+010106Let,Phleg,fs-fg,1133:00:00,04:00:00,0,0,0,0,0,preening,0,SKW,Male,Pfs-fg
+010108Gna,D. mer,r-sg,939:00:00,04:00:00,1,0,0,0,0,,0,SKW,Unknown,Dr-sg
+010109Let,G. sal,go-s,1005:00:00,02:10:00,2,0,0,0,0,only bird,2,SH,Male,Ggo-s
+010109Let,Phleg,s-pg,1020:00:00,04:00:00,1,0,0,0,0,,1,SKW,Male,Ps-pg
+010109Izu,Rheg,gp-s,1143:00:00,01:30:00,1,0,0,0,0,,1,SKW,Female,Rgp-s
+010111Let,D. mer,rg-s,945:00:00,04:00:00,2,0,0,0,0,fed both to p-sp kid,2,SKW,Female,Drg-s
+010112Edw,D. mer,unb,721:00:00,01:45:00,0,0,0,0,0,,0,CETP,Unknown,Dunb
+010112Edw,G. sal,y-sg,801:00:00,02:30:00,0,0,0,0,0,,0,CETP,Male,Gy-sg
+010112Lab,Rheg,gp-s,956:00:00,04:30:00,4,0,0,0,0,,2,CETP,Female,Rgp-s
+010112Lab,Rheg,y-sy,1018:00:00,02:30:00,2,0,0,0,0,juv,0,CETP,Unknown,Ry-sy
+010112Lab,G. sal,go-s,1125:00:00,02:50:00,4,0,0,0,0,CF,2,CETP,Male,Ggo-s
+010112Lab,G. sal,bw-s,1137:00:00,03:00:00,1,0,0,0,0,also Rfood go-s,1,CETP,Female,Gbw-s
+010112Lab,G. sal,go-s,1144:00:00,02:00:00,2,0,0,0,0,,0,CETP,Male,Ggo-s
+010113Let,D. mer,s-wb,1513:00:00,04:00:00,0,0,0,0,0,,0,SKW,Female,Ds-wb
+010115Lab,Phleg,ob-s,905:00:00,04:00:00,3,0,0,0,0,,2,SKW,Female,Pob-s
+010115Lab,Phleg,rr-s,920:00:00,03:15:00,5,0,0,0,0,,4,SKW,Male,Prr-s
+010115Lab,M. fort,r-sg,925:00:00,04:00:00,2,1,0,0,0,Phleg,1,SKW,Male,Mr-sg
+010115Lab,Phleg,unb,931:00:00,03:15:00,0,0,0,0,0,juv,0,SKW,Unknown,Punb
+010115Lab,Phleg,ob-s,934:00:00,01:30:00,4,0,0,0,0,,4,SKW,Female,Pob-s
+010115Lab,Phleg,rr-s,943:00:00,03:15:00,1,0,0,0,0,,0,SKW,Male,Prr-s
+010115Izu,Rheg,gp-s,1108:00:00,02:20:00,1,0,0,0,0,,0,SKW,Female,Rgp-s
+010117Tit,G. sal,pp-s,801:00:00,03:30:00,0,0,0,0,0,,0,DRH,Male,Gpp-s
+010117Tit,D. mer,s-wb,821:00:00,02:00:00,0,0,0,0,0,,0,DRH,Female,Ds-wb
+010117Tit,Phleg,o-so,834:00:00,02:40:00,3,0,0,0,0,,3,DRH,Unknown,Po-so
+010117Stu,M. fort,s-pp,1024:00:00,03:00:00,5,0,0,0,0,,3,DRH,Female,Ms-pp
+010117Stu,Phleg,ro-s,1029:00:00,02:50:00,2,0,0,0,0,,1,DRH,Male,Pro-s
+010118Tit,Phleg,o-so,804:00:00,02:10:00,0,0,0,0,0,,0,DRH,Unknown,Po-so
+010118Tit,D. mer,s-wb,814:00:00,04:00:00,7,0,0,0,0,,4,DRH,Female,Ds-wb
+010118Tit,Phleg,o-so,819:00:00,01:20:00,2,0,0,0,0,,2,DRH,Unknown,Po-so
+010118Tit,G. sal,pp-s,826:00:00,01:00:00,1,0,0,0,0,CF,1,DRH,Male,Gpp-s
+001023Tin,Phleg,s-by,1030:00:00,04:00:00,4,0,0,0,0,,3,KJS,Female,Ps-by
+001104Riv,M. fort,unb,815:00:00,02:50:00,2,0,0,0,0,alone,1,KJS,Unknown,Munb
+001108Izu,Rheg,r-sr,1100:00:00,03:50:00,2,0,0,0,0,alone,2,KJS,Male,Rr-sr
+001114Lab,Rheg,r-sr,1015:00:00,04:00:00,1,0,0,0,0,alone,0,KJS,Male,Rr-sr
+001117Izu,G. sal,yy-s,750:00:00,04:00:00,0,0,0,0,0,alone w/ mate (s-oy),0,KJS,Male,Gyy-s
+001118Tin,G. sal,bw-s,1000:00:00,04:00:00,4,0,0,0,0,alone,3,KJS,Female,Gbw-s
+001124Izu,G. sal,s-oy,945:00:00,02:50:00,1,0,0,0,0,,1,KJS,Female,Gs-oy
+001125Lab,D. mer,s-pr,1010:00:00,03:45:00,5,0,0,0,0,,4,KJS,Female,Ds-pr
+001128Edw,G. sal,yy-s,1100:00:00,01:20:00,2,0,0,0,0,,0,KJS,Male,Gyy-s
+001128Edw,G. sal,s-oy,1110:00:00,03:50:00,1,0,0,0,0,,1,KJS,Female,Gs-oy
+001129Lab,G. sal,s-oy,1117:00:00,04:00:00,5,0,0,0,0,,3,KJS,Female,Gs-oy
+001130Edw,Phleg,ob-s,1413:00:00,04:00:00,2,0,0,0,0,,2,KJS,Female,Pob-s
+001130Tit,D. mer,s-pr,1510:00:00,04:00:00,0,0,0,0,0,,0,KJS,Female,Ds-pr
+001201Lab,M. fort,s-yr,1130:00:00,01:30:00,1,0,0,0,0,,1,KJS,Male,Ms-yr
+001201Lab,D. mer,s-pr,1135:00:00,04:00:00,0,0,0,0,0,,0,KJS,Female,Ds-pr
+001202Gna,G. sal,rb-s,932:00:00,02:30:00,2,0,0,0,0,,2,KJS,Female,Grb-s
+001208Edw,G. sal,yy-s,834:00:00,03:20:00,6,0,2,0,0,,4,KJS,Male,Gyy-s
+001222Edw,Phleg,s-bw,924:00:00,01:55:00,1,0,0,0,0,,1,KJS,Unknown,Ps-bw
+001226Lab,G. sal,bw-s,1135:00:00,04:00:00,4,0,0,0,0,,3,KJS,Female,Gbw-s
+001226Lab,G. sal,go-s,1140:00:00,04:00:00,5,0,0,0,0,,3,KJS,Male,Ggo-s
+010102Let,G. sal,go-s,1005:00:00,03:40:00,2,0,0,0,0,,2,KJS,Male,Ggo-s
+010104Edw,Phleg,rr-s,1045:00:00,03:05:00,3,0,0,0,0,,2,KJS,Male,Prr-s
+010108Let,D. mer,s-wb,835:00:00,02:50:00,0,0,0,0,0,,0,KJS,Female,Ds-wb
+010108Let,Phleg,s-by,840:00:00,03:30:00,1,0,0,0,0,,1,KJS,Female,Ps-by
+010109Edw,D. mer,unb,815:00:00,01:40:00,0,0,0,0,0,,0,KJS,Unknown,Dunb
+010109Edw,Phleg,s-gw,820:00:00,04:00:00,1,0,0,0,0,preening,1,KJS,Unknown,Ps-gw
+010109Edw,D. mer,r-sg,830:00:00,01:50:00,2,0,0,0,1,,1,KJS,Unknown,Dr-sg
+010109Edw,Phleg,s-bw,836:00:00,04:00:00,1,0,0,0,0,,1,KJS,Unknown,Ps-bw
+010109Edw,D. mer,unb,920:00:00,04:00:00,1,0,0,0,0,,1,KJS,Unknown,Dunb
+010110Edw,Rheg,unb,818:00:00,01:50:00,2,0,0,0,0,,1,KJS,Unknown,Runb
+010111Lab,M. fort,s-yr,1040:00:00,03:30:00,5,0,0,1,0,,3,KJS,Male,Ms-yr
+010115Tit,D. mer,s-wb,1115:00:00,04:00:00,1,0,0,0,0,preening,1,KJS,Female,Ds-wb
+010115Tit,G. sal,s-pp,1120:00:00,01:15:00,0,0,0,0,0,,0,KJS,Female,Gs-pp
+010115Tit,G. sal,pp-s,1125:00:00,04:00:00,3,0,0,0,0,,3,KJS,Male,Gpp-s
+010115Tit,D. mer,s-wb,1135:00:00,04:00:00,0,0,0,0,0,preening,0,KJS,Female,Ds-wb
+010117Lab,Rheg,y-sy,900:00:00,03:50:00,8,0,0,0,0,juv,7,KJS,Unknown,Ry-sy
+010117Lab,Rheg,gp-s,905:00:00,04:00:00,1,0,0,0,0,,1,KJS,Female,Rgp-s
+010117Lab,Rheg,r-sy,910:00:00,04:00:00,5,0,0,0,0,juv,4,KJS,Unknown,Rr-sy
+010118Tit,D. mer,s-wb,810:00:00,04:00:00,0,0,0,0,0,,0,KJS,Female,Ds-wb
+010118Tit,Phleg,unb,820:00:00,01:41:00,1,0,0,0,0,juv,1,KJS,Unknown,Punb
+010118Lab,D. mer,p-sp,1523:00:00,02:00:00,2,0,0,0,0,"juv, also Rrg-s",2,SKW,Unknown,Dp-sp
+010123Tit,Rheg,unb,810:00:00,03:00:00,0,0,0,0,0,,0,CETP,Male,Runb
+010123Tit,D. mer,s-wb,827:00:00,02:15:00,3,0,0,0,0,,1,CETP,Female,Ds-wb
+010123Tit,D. mer,s-wb,855:00:00,05:00:00,3,0,0,0,0,,0,CETP,Female,Ds-wb
+010125Lab,Phleg,so-b,852:00:00,05:00:00,8,0,0,0,0,,2,CETP,Unknown,Pso-b
+010125Lab,Phleg,so-b,914:00:00,03:00:00,0,0,0,0,0,,0,CETP,Unknown,Pso-b
+010125Lab,Phleg,so-b,934:00:00,05:00:00,1,0,0,0,0,,1,CETP,Unknown,Pso-b
+010119Lab,D. mer,rg-s,1000:00:00,01:40:00,2,0,0,0,0,CF,2,DRH,Female,Drg-s
+010119Lab,D. mer,p-sp,1021:00:00,02:20:00,2,0,0,0,0,juv,1,DRH,Unknown,Dp-sp
+010119Lab,D. mer,p-sp,1038:00:00,02:40:00,1,0,1,0,0,"by mom, handled lg. insect entire 2:40 (hard to eat)",1,DRH,Unknown,Dp-sp
+010119Lab,D. mer,rg-s,1043:00:00,04:00:00,1,0,0,0,0,,0,DRH,Female,Drg-s
+010119Lab,M. fort,ob-s,1054:00:00,01:30:00,2,0,0,0,0,,2,DRH,Male,Mob-s
+010119Lab,D. mer,rg-s,1108:00:00,01:50:00,0,0,0,0,0,,0,DRH,Female,Drg-s
+010119Lab,D. mer,p-sp,1116:00:00,03:20:00,5,0,0,0,0,,2,DRH,Unknown,Dp-sp
+010119Lab,D. mer,rg-s,1127:00:00,01:00:00,0,0,0,0,0,,0,DRH,Female,Drg-s
+010122Tit,G. sal,s-yp,1026:00:00,02:10:00,2,0,0,0,0,,1,DRH,Male,Gs-yp
+010123Lab,Phleg,so-b,948:00:00,01:10:00,1,0,0,0,0,,1,DRH,Unknown,Pso-b
+010123Lab,Phleg,so-b,1023:00:00,04:00:00,4,0,0,0,0,,3,DRH,Unknown,Pso-b
+010123Lab,M. fort,unb,1035:00:00,02:50:00,2,0,0,0,0,,2,DRH,Male,Munb
+010123Lab,M. fort,ff-s,1045:00:00,01:50:00,0,0,0,0,0,,0,DRH,Female,Mff-s
+010123Lab,Phleg,o-sr,1053:00:00,03:40:00,3,0,0,1,0,juv,3,DRH,Unknown,Po-sr
+010123Lab,M. fort,unb,1112:00:00,01:20:00,0,0,0,0,0,,0,DRH,Male,Munb
+010123Lab,Phleg,o-sr,1143:00:00,01:40:00,2,0,0,0,0,juv,1,DRH,Unknown,Po-sr
+010123Lab,Phleg,so-b,1146:00:00,03:40:00,2,0,0,0,0,,0,DRH,Unknown,Pso-b
+010124Tit,D. mer,s-wb,947:00:00,03:50:00,3,0,0,0,0,,2,DRH,Female,Ds-wb
+010124Tit,M. fort,r-sg,1000:00:00,01:30:00,4,0,0,0,0,,4,DRH,Male,Mr-sg
+010124Tit,M. fort,unb,1049:00:00,01:15:00,0,0,0,0,0,,0,DRH,Female,Munb
+010124Tit,G. sal,unb,1109:00:00,01:20:00,0,0,0,0,0,,0,DRH,Female,Gunb
+010124Izu,D. mer,s-wb,1208:00:00,02:00:00,1,0,0,0,0,,1,DRH,Female,Ds-wb
+010124Izu,Phleg,wo-s,1214:00:00,01:50:00,0,0,0,0,0,,0,DRH,Female,Pwo-s
+010124Izu,D. mer,s-wb,1228:00:00,04:00:00,2,0,0,0,0,,1,DRH,Female,Ds-wb
+010124Izu,Phleg,unb,1232:00:00,03:30:00,2,0,0,0,0,,1,DRH,Unknown,Punb
+010125Tit,G. sal,pp-s,743:00:00,02:10:00,1,0,0,0,0,,1,DRH,Male,Gpp-s
+010125Tit,Phleg,unb,846:00:00,02:10:00,1,0,0,0,0,,1,DRH,Unknown,Punb
+010125Tit,G. sal,pp-s,855:00:00,02:40:00,1,0,0,0,0,,1,DRH,Male,Gpp-s
+010126Izu,M. fort,unb,730:00:00,01:50:00,4,0,0,0,0,,2,DRH,Female,Munb
+010126Izu,D. mer,ps-x,750:00:00,01:10:00,0,0,1,0,0,begging kid,0,DRH,Female,Dps-x
+010126Izu,M. fort,unb,812:00:00,01:00:00,3,0,0,0,0,,2,DRH,Female,Munb
+010126Izu,D. mer,ps-x,816:00:00,04:00:00,2,0,0,0,0,,2,DRH,Female,Dps-x
+010126Izu,D. mer,s-yb,826:00:00,02:30:00,1,0,0,0,0,,1,DRH,Unknown,Ds-yb
+010126Izu,D. mer,ps-x,830:00:00,04:00:00,3,0,0,0,0,,2,DRH,Female,Dps-x
+010126Izu,Phleg,unb,838:00:00,02:10:00,0,0,0,0,0,,0,DRH,Unknown,Punb
+010123Lab,Rheg,y-sy,829:00:00,02:00:00,1,0,2,0,0,dad by-s,1,SKW,Unknown,Ry-sy
+010123Lab,G. sal,unb,905:00:00,02:20:00,1,0,0,0,0,,1,SKW,Male,Gunb
+010124Tit,Rheg,unb,1056:00:00,04:00:00,0,0,0,0,0,,0,SKW,Male,Runb
+010126Izu,D. mer,rg-s,907:00:00,04:00:00,5,0,1,0,0,,4,SKW,Female,Drg-s
+010126Izu,D. mer,ps-x,926:00:00,04:00:00,1,0,1,0,0,D.mer rg-s,1,SKW,Female,Dps-x
+010126Izu,D. mer,unb,955:00:00,03:00:00,0,0,0,0,0,"juv, poked mom",0,SKW,Unknown,Dunb
+010126Izu,D. mer,rg-s,1010:00:00,04:00:00,0,0,1,0,0,p-sp kid chasing her,0,SKW,Female,Drg-s
+010129Izu,G. sal,ns,720:00:00,04:00:00,0,0,0,0,0,,0,SKW,Male,Gns
+010129Izu,D. mer,p-sp,745:00:00,02:00:00,4,0,0,0,0,juv ,0,SKW,Unknown,Dp-sp
+010129Izu,D. mer,unb,750:00:00,04:00:00,1,0,0,0,0,juv of ps-x,0,SKW,Unknown,Dunb
+010129Izu,D. mer,unb,815:00:00,03:10:00,2,0,0,0,0,juv,2,SKW,Unknown,Dunb
+010127Lab,D. mer,unb,1024:00:00,01:30:00,0,0,0,0,0,juv,0,CETP,Unknown,Dunb
+010127Lab,D. mer,unb,1046:00:00,05:00:00,3,0,0,0,0,juv,0,CETP,Unknown,Dunb
+010129Izu,Rheg,r-sy,805:00:00,04:20:00,4,0,0,0,0,juv,0,CETP,Unknown,Rr-sy
+010129Izu,D. mer,unb,829:00:00,05:00:00,0,0,0,0,0,juv,0,CETP,Unknown,Dunb
+010129Izu,D. mer,ps-x,708:00:00,05:00:00,0,0,0,0,0,sat on trunk,0,CETP,Female,Dps-x
+010129Izu,Rheg,y-sy,749:00:00,01:00:00,1,0,0,0,0,juv,0,CETP,Unknown,Ry-sy
+010129Izu,M. fort,s-yr,740:00:00,04:45:00,1,0,0,0,0,,0,CETP,Male,Ms-yr
+010129Izu,D. mer,rg-s,800:00:00,04:45:00,0,0,0,0,0,,0,CETP,Female,Drg-s
+010129Izu,D. mer,rg-s,919:00:00,01:30:00,1,0,0,0,1,,1,CETP,Female,Drg-s
+010129Izu,G. sal,s-yp,916:00:00,01:30:00,1,0,0,0,0,,0,CETP,Female,Gs-yp
+010130Stu,D. mer,wp-s,732:00:00,02:00:00,1,0,0,0,0,fed juv cicada,1,CETP,Female,Dwp-s
+010130Stu,D. mer,unb,724:00:00,01:00:00,0,0,0,0,0,juv,0,CETP,Unknown,Dunb
+010131Stu,D. mer,unb,736:00:00,02:45:00,3,0,0,0,0,"juv, finished item, was begged by other juv",0,CETP,Unknown,Dunb
+010131Stu,D. mer,wp-s,732:00:00,01:10:00,0,0,0,0,0,,0,CETP,Female,Dwp-s
+010131Stu,Phleg,b-rs,818:00:00,05:00:00,3,0,0,0,0,,0,CETP,Unknown,Pb-rs
+010131Let,G. sal,bw-s,855:00:00,04:00:00,6,0,0,0,0,,4,SKW,Female,Gbw-s
+010131Let,Phleg,fs-fg,907:00:00,04:00:00,5,0,0,0,0,,2,SKW,Male,Pfs-fg
+010201Stua,M. fort,r-sg,855:00:00,02:20:00,2,0,0,0,0,,1,DRH,Male,Mr-sg
+010201Stua,Phleg,ro-s,930:00:00,04:00:00,0,0,0,0,0,preening,0,DRH,Male,Pro-s
+010201Stub,D. mer,unb,1024:00:00,04:00:00,0,0,0,0,0,,0,DRH,Unknown,Dunb
+010202Stua,G. sal,y-sb,817:00:00,02:00:00,0,0,0,0,0,,0,DRH,Female,Gy-sb
+010203Izua,D. mer,r-sg,739:00:00,04:00:00,0,0,0,0,0,,0,DRH,Unknown,Dr-sg
+010203Izua,Rheg,gp-s,749:00:00,02:20:00,8,0,0,0,0,,6,DRH,Female,Rgp-s
+010203Izua,M. fort,ry-s,824:00:00,04:00:00,2,0,0,0,0,,2,DRH,Female,Mry-s
+010203Izua,Rheg,unb,829:00:00,04:00:00,5,0,0,0,1, r-sy juv,4,DRH,Male,Runb
+010203Izua,Rheg,r-sy,835:00:00,04:00:00,2,0,0,0,0,"juv, preening",1,DRH,Unknown,Rr-sy
+010203Izub,Rheg,y-sy,938:00:00,02:40:00,3,0,1,0,0,"juv, displ. by unb male",3,DRH,Unknown,Ry-sy
+010203Izub,Rheg,by-s,1048:00:00,02:20:00,1,0,0,0,0,,1,DRH,Male,Rby-s
+010203Izub,Rheg,gp-s,1050:00:00,01:50:00,0,0,0,0,0,,0,DRH,Female,Rgp-s
+010203Izub,D. mer,r-sg,1129:00:00,04:00:00,2,0,1,0,0,,2,DRH,Unknown,Dr-sg
+010205Stu,D. mer,unb,948:00:00,03:20:00,1,0,0,0,0,,0,DRH,Unknown,Dunb
+010205Stu,G. sal,s-by,958:00:00,04:00:00,2,0,0,0,0,,2,DRH,Male,Gs-by
+010205Stu,G. sal,s-yp,1013:00:00,01:20:00,2,0,0,0,0,,2,DRH,Male,Gs-yp
+010205Stu,G. sal,s-yp,1028:00:00,04:00:00,2,0,0,0,0,,1,DRH,Female,Gs-yp
+010205Stu,D. mer,unb,1036:00:00,01:40:00,1,0,0,0,0,,0,DRH,Unknown,Dunb
+010209Lab,D. mer,p-sp,1045:00:00,04:00:00,2,0,0,0,0,juv,0,DRH,Unknown,Dp-sp
+010210Lab,G. sal,unb,1030:00:00,01:30:00,3,1,0,0,0,trumpeter,2,DRH,Male,Gunb
+010210Lab,G. sal,y-sb,1105:00:00,01:00:00,1,0,0,0,0,,1,DRH,Female,Gy-sb
+010123Tit,Rheg,unb,845:00:00,01:28:00,1,0,0,0,0,,1,KJS,Male,Runb
+010123Tit,D. mer,s-wb,850:00:00,04:00:00,2,0,0,0,0,,0,KJS,Female,Ds-wb
+010123Tit,M. fort,r-sg,854:00:00,01:00:00,0,0,0,0,0,,0,KJS,Male,Mr-sg
+010124Tit,D. mer,s-wb,912:00:00,01:05:00,1,0,0,0,0,just arrived at swarm,1,KJS,Female,Ds-wb
+010125Tit,Rheg,unb,740:00:00,02:35:00,2,0,0,0,0,,0,KJS,Male,Runb
+010125Tit,Rheg,unb,912:00:00,04:00:00,1,0,0,0,0,,1,KJS,Male,Runb
+010125Tit,G. sal,s-pp,846:00:00,02:10:00,3,0,0,0,0,,3,KJS,Female,Gs-pp
+010125Tit,G. sal,pp-s,905:00:00,04:00:00,1,0,0,0,0,,0,KJS,Male,Gpp-s
+010129Izu,D. mer,ps-x,1030:00:00,02:20:00,0,2,0,0,0,,0,KJS,Female,Dps-x
+010129Izu,D. mer,unb,1103:00:00,04:00:00,4,0,0,0,0,dropped food once,2,KJS,Unknown,Dunb
+010129Izu,M. fort,s-yr,1120:00:00,01:29:00,1,0,0,0,0,,1,KJS,Male,Ms-yr
+010129Izu,Rheg,r-sy,1148:00:00,01:53:00,0,0,0,0,0,juv,0,KJS,Unknown,Rr-sy
+010130Let,G. sal,bw-s,1025:00:00,03:20:00,2,0,0,0,0,,1,KJS,Female,Gbw-s
+010130Let,G. sal,unb,1029:00:00,02:40:00,1,0,0,0,0,,0,KJS,Male,Gunb
+010131Let,Phleg,s-by,916:00:00,03:30:00,0,0,0,0,0,,0,SKW,Female,Ps-by
+010131Let,Phleg,fs-fg,938:00:00,01:45:00,0,0,0,0,0,,0,SKW,Male,Pfs-fg
+010131Let,Phleg,fs-fg,950:00:00,04:00:00,1,0,0,0,0,,0,SKW,Male,Pfs-fg
+010201Izu,Rheg,y-sy,1123:00:00,03:30:00,3,1,0,0,0,juv; D.mer,2,SKW,Unknown,Ry-sy
+010202Lab,Phleg,so-b,955:00:00,02:30:00,2,0,0,0,1,/o-sr,0,SKW,Unknown,Pso-b
+010202Lab,M. fort,s-yy,1018:00:00,04:00:00,1,0,0,0,0,,1,SKW,Male,Ms-yy
+010202Lab,Phleg,so-b,1037:00:00,04:00:00,2,0,1,0,1,"Roo-s, Io-sr",0,SKW,Unknown,Pso-b
+010202Lab,Phleg,o-sr,1046:00:00,04:00:00,10,0,1,0,0,Roo-s,6,SKW,Unknown,Po-sr
+010202Lab,Phleg,oo-s,1056:00:00,03:00:00,3,0,0,0,0,,1,SKW,Unknown,Poo-s
+010202Lab,Phleg,so-b,1106:00:00,04:00:00,3,0,0,0,1,alone,1,SKW,Unknown,Pso-b
+010203Stu,D. mer,wp-s,803:00:00,01:15:00,0,0,0,0,0,,0,CETP,Female,Dwp-s
+010205Let,Phleg,s-pg,800:00:00,03:50:00,0,0,0,0,0,,0,CETP,Male,Ps-pg
+010206Izu,Rheg,r-sy,951:00:00,01:15:00,0,0,0,0,0,juv,0,CETP,Unknown,Rr-sy
+010206Izu,Rheg,y-sy,927:00:00,03:00:00,3,1,0,1,0,"ID.mer, RD.mer (both p-sp juv)",1,CETP,Unknown,Ry-sy
+010206Izu,Rheg,y-sy,843:00:00,03:30:00,5,0,0,1,0,G.sal yy-s,3,CETP,Unknown,Ry-sy
+010206Izu,Rheg,unb,900:00:00,01:30:00,4,0,0,0,0,,1,CETP,Male,Runb
+010206Izu,G. sal,yy-s,848:00:00,01:10:00,0,1,0,0,0,Rheg,0,CETP,Male,Gyy-s
+010206Izu,D. mer,p-sp,816:00:00,05:00:00,6,1,0,0,1,Rheg,1,CETP,Unknown,Dp-sp
+010206Izu,D. mer,p-sp,929:00:00,01:10:00,0,0,0,0,0,fed by mom rg-s,0,CETP,Unknown,Dp-sp
+010205Izu,Rheg,unb,849:00:00,04:00:00,3,0,0,0,1,/y-sy,2,SKW,Male,Runb
+010205Izu,Rheg,by-s,957:00:00,04:00:00,2,0,0,0,0,,1,SKW,Male,Rby-s
+010205Izu,G. sal,rb-s,858:00:00,03:00:00,1,0,0,0,0,,1,SKW,Female,Grb-s
+010207Lab,M. fort,b-sr,1134:00:00,03:00:00,3,0,0,0,0,juv,3,SKW,Unknown,Mb-sr
+010207Lab,M. fort,unb,1137:00:00,02:30:00,0,0,0,2,0,/Myr.myo,0,SKW,Female,Munb
+010131Stu,D. mer,unb,723:00:00,04:00:00,1,0,0,0,0,juv; wing begging,1,DRH,Unknown,Dunb
+010131Stu,D. mer,unb,749:00:00,03:40:00,1,0,1,0,0,wp-s/,1,DRH,Unknown,Dunb
+010131Stu,Phleg,b-rs,757:00:00,04:00:00,2,0,0,0,0,,1,DRH,Unknown,Pb-rs
+010131Stu,D. mer,wp-s,808:00:00,01:00:00,0,0,0,0,0,,0,DRH,Female,Dwp-s
+010131Stu,Phleg,ro-s,824:00:00,02:40:00,0,0,0,0,0,,0,DRH,Male,Pro-s
+010201Stua,D. mer,wp-s,800:00:00,03:40:00,0,0,0,0,0,,0,DRH,Female,Dwp-s
+010201Stua,D. mer,unb,821:00:00,01:30:00,1,0,0,0,0,juv; begging,0,DRH,Unknown,Dunb
+010201Stua,M. fort,r-sg,834:00:00,02:10:00,0,0,0,0,0,,0,DRH,Male,Mr-sg
+010201Stua,Phleg,ro-s,851:00:00,01:30:00,2,0,0,0,0,,2,DRH,Male,Pro-s
+010131Stu,D. mer,unb,956:00:00,03:51:00,3,0,0,0,0,twice caught a leaf!,1,KJS,Unknown,Dunb
+010202Izua,Rheg,gp-s,832:00:00,03:29:00,1,0,0,0,0,,1,KJS,Female,Rgp-s
+010202Izub,D. mer,p-sp,1107:00:00,04:00:00,4,2,0,0,0,juv,3,KJS,Unknown,Dp-sp
+010202Izub,Rheg,y-sy,1120:00:00,04:00:00,0,0,2,0,0,,0,KJS,Unknown,Ry-sy
+010202Izub,Rheg,gp-s,1125:00:00,04:00:00,4,0,0,0,1,,4,KJS,Female,Rgp-s
+010202Izub,Rheg,r-sy,1134:00:00,4:00:00,4,0,0,0,0,,2,KJS,Unknown,Rr-sy
+010207Izu,Rheg,unb,730:00:00,00:51:00,1,0,0,0,0,,1,KJS,Male,Runb
+010207Izu,Rheg,r-sy,739:00:00,03:39:00,3,0,2,0,0,,2,KJS,Unknown,Rr-sy
+99102827Na,Rheg,s-yp,750:00:00,04:00:00,9,3,0,0,0,Phleg,3,SKW,Female,Rs-yp
+99102827Na,Rheg,s-yr,750:00:00,04:00:00,6,0,0,0,1,D.mer,2,SKW,Male,Rs-yr
+99102827Na,Rheg,unb,750:00:00,04:00:00,2,1,1,1,0,inters w/ D.mer,0,SKW,Male,Runb
+99102827Na,Rheg,unb,750:00:00,04:00:00,4,0,1,0,0,,1,SKW,Male,Runb
+99102827Na,Phleg,unb,750:00:00,03:08:00,5,0,0,1,0,Rheg,3,SKW,Unknown,Punb
+99102827Na,Rheg,s-yr,750:00:00,04:00:00,2,1,0,0,0,M.fort,0,SKW,Male,Rs-yr
+991104Peca,Rheg,s-wp,947:00:00,04:00:00,2,0,0,0,0,,2,SKW,Female,Rs-wp
+991105Ago,Phleg,unb,1500:00:00,04:00:00,3,0,0,0,0,,1,SKW,Unknown,Punb
+991105Ago,Phleg,unb,1500:00:00,04:00:00,2,0,0,0,0,,0,SKW,Unknown,Punb
+991111Agoa,Rheg,gp-s,652:00:00,04:00:00,2,0,0,0,0,,0,CETP,Female,Rgp-s
+991111Agoa,Rheg,gp-s,652:00:00,04:00:00,3,1,0,0,0,M.goeldii,0,CETP,Female,Rgp-s
